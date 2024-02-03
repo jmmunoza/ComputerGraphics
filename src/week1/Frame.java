@@ -2,14 +2,18 @@ package week1;
 
 import javax.swing.*;
 
-public class Frame extends JFrame {
-    public Frame(JPanel panel) {
-        super("Week 1 - Bresenham's algorithm");
+public class Frame {
+    private final JFrame frame;
 
-        this.add(panel);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500, 500);
-        this.setLocationRelativeTo(null);
-        this.setVisible(true);
+    public Frame(JPanel panel) {
+        frame = new JFrame("Week 1 - Bresenham's algorithm");
+        frame.add(panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 500);
+        frame.setLocationRelativeTo(null);
+    }
+
+    public void show() {
+        frame.setVisible(true);
     }
 }

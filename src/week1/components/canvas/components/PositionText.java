@@ -1,5 +1,6 @@
 package week1.components.canvas.components;
 
+import week1.components.canvas.CanvasComponent;
 import week1.components.canvas.CanvasMapper;
 import week1.components.canvas.listeners.CanvasMouseListener;
 import week1.components.canvas.listeners.CanvasPaintListener;
@@ -10,19 +11,12 @@ import week1.components.canvas.observers.CanvasResizeObserver;
 
 import java.awt.*;
 
-public class PositionText implements CanvasMouseListener, CanvasPaintListener, CanvasResizeListener {
+public class PositionText implements CanvasComponent, CanvasMouseListener, CanvasPaintListener, CanvasResizeListener {
     private int x = 0;
     private int y = 0;
     private int w = 0;
     private int h = 0;
     private boolean show = false;
-
-    public PositionText() {
-        CanvasMouseObserver.attachListener(this);
-        CanvasPaintObserver.attachListener(this);
-        CanvasResizeObserver.attachListener(this);
-    }
-
 
     @Override
     public void onMouseDragged(int x, int y) {
@@ -73,5 +67,12 @@ public class PositionText implements CanvasMouseListener, CanvasPaintListener, C
     public void onResize(int width, int height) {
         this.w = width;
         this.h = height;
+    }
+
+    @Override
+    public void subscribe() {
+        CanvasMouseObserver.attachListener(this);
+        CanvasPaintObserver.attachListener(this);
+        CanvasResizeObserver.attachListener(this);
     }
 }

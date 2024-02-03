@@ -10,10 +10,12 @@ import java.awt.event.*;
 import java.util.List;
 
 public class Canvas extends JPanel implements MouseMotionListener, ComponentListener, MouseListener {
-    private final List<Shape> shapes;
 
-    public Canvas(List<Shape> shapes) {
-        this.shapes = shapes;
+    public Canvas(List<CanvasComponent> components) {
+        for (CanvasComponent component : components) {
+            component.subscribe();
+        }
+
         this.addMouseMotionListener(this);
         this.addComponentListener(this);
         this.addMouseListener(this);

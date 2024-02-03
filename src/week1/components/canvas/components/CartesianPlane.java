@@ -1,5 +1,6 @@
 package week1.components.canvas.components;
 
+import week1.components.canvas.CanvasComponent;
 import week1.components.canvas.listeners.CanvasPaintListener;
 import week1.components.canvas.listeners.CanvasResizeListener;
 import week1.components.canvas.observers.CanvasPaintObserver;
@@ -8,16 +9,13 @@ import week1.components.canvas.shapes.line.Line;
 
 import java.awt.*;
 
-public class CartesianPlane implements CanvasResizeListener, CanvasPaintListener {
+public class CartesianPlane implements CanvasComponent, CanvasResizeListener, CanvasPaintListener {
     private final Line xLine;
     private final Line yLine;
 
     public CartesianPlane() {
         xLine = new Line();
         yLine = new Line();
-
-        CanvasResizeObserver.attachListener(this);
-        CanvasPaintObserver.attachListener(this);
     }
 
     @Override
@@ -46,5 +44,11 @@ public class CartesianPlane implements CanvasResizeListener, CanvasPaintListener
         // y line
         g2d.setColor(Color.GREEN);
         yLine.draw(g);
+    }
+
+    @Override
+    public void subscribe() {
+        CanvasResizeObserver.attachListener(this);
+        CanvasPaintObserver.attachListener(this);
     }
 }

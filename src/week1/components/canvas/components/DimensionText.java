@@ -1,5 +1,6 @@
 package week1.components.canvas.components;
 
+import week1.components.canvas.CanvasComponent;
 import week1.components.canvas.CanvasMapper;
 import week1.components.canvas.listeners.CanvasPaintListener;
 import week1.components.canvas.listeners.CanvasResizeListener;
@@ -8,14 +9,9 @@ import week1.components.canvas.observers.CanvasResizeObserver;
 
 import java.awt.*;
 
-public class DimensionText implements CanvasPaintListener, CanvasResizeListener {
+public class DimensionText implements CanvasComponent, CanvasPaintListener, CanvasResizeListener {
     private int w = 0;
     private int h = 0;
-
-    public DimensionText() {
-        CanvasPaintObserver.attachListener(this);
-        CanvasResizeObserver.attachListener(this);
-    }
 
     @Override
     public void onPaint(Graphics g) {
@@ -34,5 +30,11 @@ public class DimensionText implements CanvasPaintListener, CanvasResizeListener 
     public void onResize(int width, int height) {
         this.w = width;
         this.h = height;
+    }
+
+    @Override
+    public void subscribe() {
+        CanvasPaintObserver.attachListener(this);
+        CanvasResizeObserver.attachListener(this);
     }
 }

@@ -1,5 +1,6 @@
 package week1.components.canvas.components;
 
+import week1.components.canvas.CanvasComponent;
 import week1.components.canvas.listeners.CanvasMouseListener;
 import week1.components.canvas.listeners.CanvasPaintListener;
 import week1.components.canvas.observers.CanvasMouseObserver;
@@ -8,14 +9,12 @@ import week1.components.canvas.shapes.line.Line;
 
 import java.awt.*;
 
-public class DraggableLine implements CanvasMouseListener, CanvasPaintListener {
+public class DraggableLine implements CanvasComponent, CanvasMouseListener, CanvasPaintListener {
     private final Line line;
 
     public DraggableLine() {
         line = new Line();
 
-        CanvasMouseObserver.attachListener(this);
-        CanvasPaintObserver.attachListener(this);
     }
 
     @Override
@@ -60,5 +59,11 @@ public class DraggableLine implements CanvasMouseListener, CanvasPaintListener {
         g2d.setColor(Color.BLACK);
 
         line.draw(g);
+    }
+
+    @Override
+    public void subscribe() {
+        CanvasMouseObserver.attachListener(this);
+        CanvasPaintObserver.attachListener(this);
     }
 }

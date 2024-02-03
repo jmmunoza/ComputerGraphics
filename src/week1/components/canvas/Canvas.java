@@ -57,42 +57,60 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        CanvasMouseObserver.notifyOnMousePressed(e.getX(), e.getY());
+        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+
+        CanvasMouseObserver.notifyOnMousePressed(mappedX, mappedY);
 
         repaint();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        CanvasMouseObserver.notifyOnMouseReleased(e.getX(), e.getY());
+        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+
+        CanvasMouseObserver.notifyOnMouseReleased(mappedX, mappedY);
 
         repaint();
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        CanvasMouseObserver.notifyOnMouseEntered(e.getX(), e.getY());
+        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+
+        CanvasMouseObserver.notifyOnMouseEntered(mappedX, mappedY);
 
         repaint();
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        CanvasMouseObserver.notifyOnMouseExited(getX(), e.getY());
+        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+
+        CanvasMouseObserver.notifyOnMouseExited(mappedX, mappedY);
 
         repaint();
     }
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        CanvasMouseObserver.notifyOnMouseDragged(e.getX(), e.getY());
+        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+
+        CanvasMouseObserver.notifyOnMouseDragged(mappedX, mappedY);
 
         repaint();
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        CanvasMouseObserver.notifyOnMouseMoved(e.getX(), e.getY());
+        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+
+        CanvasMouseObserver.notifyOnMouseMoved(mappedX, mappedY);
 
         repaint();
     }

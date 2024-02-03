@@ -1,5 +1,6 @@
-package week1.components.canvas.shapes;
+package week1.components.canvas.components;
 
+import week1.components.canvas.CanvasMapper;
 import week1.components.canvas.listeners.CanvasMouseListener;
 import week1.components.canvas.listeners.CanvasPaintListener;
 import week1.components.canvas.listeners.CanvasResizeListener;
@@ -59,8 +60,13 @@ public class PositionText implements CanvasMouseListener, CanvasPaintListener, C
     public void onPaint(Graphics g) {
         if (!show) return;
 
+        int mappedX = CanvasMapper.mapXpToXj(x, w);
+        int mappedY = CanvasMapper.mapYpToYj(y, h);
+
+        String text = "(" + x + ", " + y + ")";
+
         g.setColor(Color.BLACK);
-        g.drawString("(" + x + ", " + (h - y) + ") w=" + w + " h=" + h, x + 10, y - 10);
+        g.drawString(text, mappedX + 10, mappedY - 10);
     }
 
     @Override

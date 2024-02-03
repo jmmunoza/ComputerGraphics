@@ -20,17 +20,19 @@ public class CartesianPlane implements CanvasComponent, CanvasResizeListener, Ca
 
     @Override
     public void onResize(int width, int height) {
+        int padding = 30;
+
         // x line
-        xLine.setX1(0);
-        xLine.setX2(width);
+        xLine.setX1(padding);
+        xLine.setX2(width - padding);
         xLine.setY1(height / 2);
         xLine.setY2(height / 2);
 
         // y line
         yLine.setX1(width / 2);
         yLine.setX2(width / 2);
-        yLine.setY1(0);
-        yLine.setY2(height);
+        yLine.setY1(padding);
+        yLine.setY2(height - padding);
     }
 
     @Override

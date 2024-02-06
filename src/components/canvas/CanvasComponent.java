@@ -1,4 +1,4 @@
-package week1.components.canvas;
+package components.canvas;
 
 public interface CanvasComponent {
     void subscribe();

@@ -1,6 +1,6 @@
-package week1.components.canvas.observers;
+package components.canvas.observers;
 
-import week1.components.canvas.listeners.CanvasPaintListener;
+import components.canvas.listeners.CanvasPaintListener;
 
 import java.awt.*;
 import java.util.ArrayList;

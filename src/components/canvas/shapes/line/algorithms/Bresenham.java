@@ -1,7 +1,7 @@
-package week1.components.canvas.shapes.line.algorithms;
+package components.canvas.shapes.line.algorithms;
 
-import week1.components.canvas.shapes.line.LineAlgorithm;
-import week1.components.canvas.shapes.pixel.Pixel;
+import components.canvas.shapes.line.LineAlgorithm;
+import components.canvas.shapes.pixel.Pixel;
 
 import java.awt.*;
 

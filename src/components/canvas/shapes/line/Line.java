@@ -1,7 +1,7 @@
-package week1.components.canvas.shapes.line;
+package components.canvas.shapes.line;
 
-import week1.components.canvas.CanvasShape;
-import week1.components.canvas.shapes.line.algorithms.Bresenham;
+import components.canvas.CanvasShape;
+import components.canvas.shapes.line.algorithms.Bresenham;
 
 import java.awt.*;
 

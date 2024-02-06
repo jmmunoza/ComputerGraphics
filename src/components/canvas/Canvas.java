@@ -1,8 +1,8 @@
-package week1.components.canvas;
+package components.canvas;
 
-import week1.components.canvas.observers.CanvasMouseObserver;
-import week1.components.canvas.observers.CanvasPaintObserver;
-import week1.components.canvas.observers.CanvasResizeObserver;
+import components.canvas.observers.CanvasMouseObserver;
+import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.observers.CanvasResizeObserver;
 
 import javax.swing.*;
 import java.awt.*;

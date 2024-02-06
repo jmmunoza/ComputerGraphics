@@ -1,4 +1,4 @@
-package week1.components.canvas.shapes.line;
+package components.canvas.shapes.line;
 
 import java.awt.*;
 

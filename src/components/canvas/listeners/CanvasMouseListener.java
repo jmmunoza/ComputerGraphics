@@ -1,4 +1,4 @@
-package week1.components.canvas.listeners;
+package components.canvas.listeners;
 
 public interface CanvasMouseListener {
     void onMouseDragged(int x, int y);

@@ -1,11 +1,11 @@
-package week1.components.canvas.components;
+package components.canvas.components;
 
-import week1.components.canvas.CanvasComponent;
-import week1.components.canvas.listeners.CanvasPaintListener;
-import week1.components.canvas.listeners.CanvasResizeListener;
-import week1.components.canvas.observers.CanvasPaintObserver;
-import week1.components.canvas.observers.CanvasResizeObserver;
-import week1.components.canvas.shapes.text.Text;
+import components.canvas.CanvasComponent;
+import components.canvas.listeners.CanvasPaintListener;
+import components.canvas.listeners.CanvasResizeListener;
+import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.observers.CanvasResizeObserver;
+import components.canvas.shapes.text.Text;
 
 import java.awt.*;
 
@@ -16,8 +16,6 @@ public class DimensionText implements CanvasComponent, CanvasPaintListener, Canv
 
     public DimensionText() {
         text = new Text();
-        text.setX(5);
-        text.setY(5);
     }
 
     @Override
@@ -33,6 +31,10 @@ public class DimensionText implements CanvasComponent, CanvasPaintListener, Canv
     public void onResize(int width, int height) {
         this.w = width;
         this.h = height;
+
+        int padding = 10;
+        text.setX((-w / 2) + padding);
+        text.setY((-h / 2) + padding);
     }
 
     @Override

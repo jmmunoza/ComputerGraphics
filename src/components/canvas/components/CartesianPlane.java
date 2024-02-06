@@ -1,11 +1,11 @@
-package week1.components.canvas.components;
+package components.canvas.components;
 
-import week1.components.canvas.CanvasComponent;
-import week1.components.canvas.listeners.CanvasPaintListener;
-import week1.components.canvas.listeners.CanvasResizeListener;
-import week1.components.canvas.observers.CanvasPaintObserver;
-import week1.components.canvas.observers.CanvasResizeObserver;
-import week1.components.canvas.shapes.line.Line;
+import components.canvas.CanvasComponent;
+import components.canvas.listeners.CanvasPaintListener;
+import components.canvas.listeners.CanvasResizeListener;
+import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.observers.CanvasResizeObserver;
+import components.canvas.shapes.line.Line;
 
 import java.awt.*;
 
@@ -23,16 +23,16 @@ public class CartesianPlane implements CanvasComponent, CanvasResizeListener, Ca
         int padding = 30;
 
         // x line
-        xLine.setX1(padding);
-        xLine.setX2(width - padding);
-        xLine.setY1(height / 2);
-        xLine.setY2(height / 2);
+        xLine.setX1((-width / 2) + padding);
+        xLine.setX2((width / 2) - padding);
+        xLine.setY1(0);
+        xLine.setY2(0);
 
         // y line
-        yLine.setX1(width / 2);
-        yLine.setX2(width / 2);
-        yLine.setY1(padding);
-        yLine.setY2(height - padding);
+        yLine.setX1(0);
+        yLine.setX2(0);
+        yLine.setY1((-height / 2) + padding);
+        yLine.setY2((height / 2) - padding);
     }
 
     @Override

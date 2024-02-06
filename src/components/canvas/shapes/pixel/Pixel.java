@@ -1,6 +1,6 @@
-package week1.components.canvas.shapes.pixel;
+package components.canvas.shapes.pixel;
 
-import week1.components.canvas.CanvasMapper;
+import components.canvas.CanvasMapper;
 
 import java.awt.*;
 

@@ -1,4 +1,4 @@
-package week1.components.canvas.listeners;
+package components.canvas.listeners;
 
 import java.awt.*;
 

@@ -1,7 +1,16 @@
 package components.canvas.shapes.line;
 
-import java.awt.*;
+public enum LineAlgorithm {
+    BRESENHAM("Bresenham");
 
-public interface LineAlgorithm {
-    void drawLine(Graphics g, int x1, int y1, int x2, int y2);
+    private final String value;
+
+    LineAlgorithm(String value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return value;
+    }
 }

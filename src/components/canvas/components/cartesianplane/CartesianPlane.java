@@ -1,4 +1,4 @@
-package components.canvas.components;
+package components.canvas.components.cartesianplane;
 
 import components.canvas.CanvasComponent;
 import components.canvas.listeners.CanvasPaintListener;
@@ -6,6 +6,7 @@ import components.canvas.listeners.CanvasResizeListener;
 import components.canvas.observers.CanvasPaintObserver;
 import components.canvas.observers.CanvasResizeObserver;
 import components.canvas.shapes.line.Line;
+import components.canvas.shapes.line.LineAlgorithm;
 
 import java.awt.*;
 
@@ -14,8 +15,8 @@ public class CartesianPlane implements CanvasComponent, CanvasResizeListener, Ca
     private final Line yLine;
 
     public CartesianPlane() {
-        xLine = new Line();
-        yLine = new Line();
+        xLine = new Line(LineAlgorithm.BRESENHAM);
+        yLine = new Line(LineAlgorithm.BRESENHAM);
     }
 
     @Override

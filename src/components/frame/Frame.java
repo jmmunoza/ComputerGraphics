@@ -9,7 +9,7 @@ public class Frame {
         frame = new JFrame(title);
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
+        frame.setSize(700, 700);
         frame.setLocationRelativeTo(null);
     }
 

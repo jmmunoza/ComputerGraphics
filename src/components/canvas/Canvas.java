@@ -16,6 +16,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
             component.subscribe();
         }
 
+        this.setBackground(Color.BLACK);
+
         this.addMouseMotionListener(this);
         this.addComponentListener(this);
         this.addMouseListener(this);

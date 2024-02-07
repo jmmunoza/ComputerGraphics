@@ -1,19 +1,18 @@
 package components.canvas.shapes.line;
 
 import components.canvas.CanvasShape;
-import components.canvas.shapes.line.algorithms.Bresenham;
 
 import java.awt.*;
 
 public class Line implements CanvasShape {
-    private final LineAlgorithm algorithm;
+    private final ILineAlgorithm algorithm;
     private int x1 = 0;
     private int y1 = 0;
     private int x2 = 0;
     private int y2 = 0;
 
-    public Line() {
-        this.algorithm = new Bresenham();
+    public Line(LineAlgorithm algorithmType) {
+        algorithm = LineProvider.inject(algorithmType);
     }
 
     public void setX1(int x1) {

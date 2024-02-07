@@ -1,4 +1,4 @@
-package components.canvas.components;
+package components.canvas.components.dimensiontext;
 
 import components.canvas.CanvasComponent;
 import components.canvas.listeners.CanvasPaintListener;
@@ -20,7 +20,7 @@ public class DimensionText implements CanvasComponent, CanvasPaintListener, Canv
 
     @Override
     public void onPaint(Graphics g) {
-        g.setColor(Color.BLACK);
+        g.setColor(Color.WHITE);
 
         String dimensionText = "w=" + w + " h=" + h;
         text.setText(dimensionText);

@@ -1,11 +1,11 @@
 package components.canvas.shapes.line.algorithms;
 
-import components.canvas.shapes.line.LineAlgorithm;
+import components.canvas.shapes.line.ILineAlgorithm;
 import components.canvas.shapes.pixel.Pixel;
 
 import java.awt.*;
 
-public class Bresenham implements LineAlgorithm {
+public class Bresenham implements ILineAlgorithm {
     public void drawLine(Graphics g, int x1, int y1, int x2, int y2) {
         // delta of exact value and rounded value of the dependent variable
         int d = 0;

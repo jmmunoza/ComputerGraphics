@@ -2,10 +2,10 @@ package week1;
 
 import components.canvas.Canvas;
 import components.canvas.CanvasComponent;
-import components.canvas.components.CartesianPlane;
-import components.canvas.components.DimensionText;
-import components.canvas.components.DraggableLine;
-import components.canvas.components.PositionText;
+import components.canvas.components.cartesianplane.CartesianPlane;
+import components.canvas.components.dimensiontext.DimensionText;
+import components.canvas.components.draggableline.DraggableLine;
+import components.canvas.components.positiontext.PositionText;
 import components.frame.Frame;
 
 import javax.swing.*;

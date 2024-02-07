@@ -1,64 +1,70 @@
-package components.canvas.components;
+package components.canvas.components.positiontext;
 
 import components.canvas.CanvasComponent;
 import components.canvas.listeners.CanvasMouseListener;
 import components.canvas.listeners.CanvasPaintListener;
 import components.canvas.observers.CanvasMouseObserver;
 import components.canvas.observers.CanvasPaintObserver;
-import components.canvas.shapes.line.Line;
+import components.canvas.shapes.text.Text;
 
 import java.awt.*;
 
-public class DraggableLine implements CanvasComponent, CanvasMouseListener, CanvasPaintListener {
-    private final Line line;
+public class PositionText implements CanvasComponent, CanvasMouseListener, CanvasPaintListener {
+    private final Text text;
+    private int x = 0;
+    private int y = 0;
+    private boolean show = false;
 
-    public DraggableLine() {
-        line = new Line();
-
+    public PositionText() {
+        text = new Text();
     }
 
     @Override
     public void onMouseDragged(int x, int y) {
-        line.setX2(x);
-        line.setY2(y);
+        this.x = x;
+        this.y = y;
     }
 
     @Override
     public void onMouseMoved(int x, int y) {
-
+        this.x = x;
+        this.y = y;
     }
 
     @Override
     public void onMousePressed(int x, int y) {
-        line.setX2(x);
-        line.setY2(y);
-        line.setX1(x);
-        line.setY1(y);
+
     }
 
     @Override
     public void onMouseReleased(int x, int y) {
-        line.setX2(x);
-        line.setY2(y);
+
     }
 
     @Override
     public void onMouseEntered(int x, int y) {
-
+        show = true;
     }
 
     @Override
     public void onMousedExited(int x, int y) {
-
+        show = false;
     }
 
     @Override
     public void onPaint(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
+        if (!show) return;
 
-        g2d.setColor(Color.BLACK);
+        int padding = 5;
 
-        line.draw(g);
+        text.setX(x + padding);
+        text.setY(y + padding);
+
+        String positionText = "(" + x + ", " + y + ")";
+        g.setColor(Color.WHITE);
+
+        text.setText(positionText);
+        text.draw(g);
     }
 
     @Override

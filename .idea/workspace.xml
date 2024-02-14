@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="New mapper">
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/ILineClippingAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClipping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClippingAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClippingProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/algorithms/CohenSutherland.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/algorithms/LiangBarsky.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/ILineAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/LineProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Line clipping algorithms added!!!">
+      <change afterPath="$PROJECT_DIR$/src/math/matrix/Matrix3x3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/matrix/Matrix4x4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/matrix/SquareMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/point/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/point/Point3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/point/Point4D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/vector/Vector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/vector/Vector3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/exceptions/InvalidMatrixSizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weeks/week3/Week3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/CartesianPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/cartesianplane/CartesianPlane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/DimensionText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/dimensiontext/DimensionText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/DraggableLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/draggableline/DraggableLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/PositionText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/positiontext/PositionText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/LineAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/LineAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/algorithms/Bresenham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/algorithms/Bresenham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/frame/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/frame/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/Week1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week1/Week1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week2/Week2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week2/Week2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/week1/Week1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week1/Week1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/week2/Week2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week2/Week2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,33 +46,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Week1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Week2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Week1.executor": "Run",
+    "Application.Week2.executor": "Run",
+    "Application.Week3.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="weeks.week3" />
+      <recent name="math" />
       <recent name="week2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Week2">
+  <component name="RunManager" selected="Application.Week3">
     <configuration name="Week1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="week1.Week1" />
+      <option name="MAIN_CLASS_NAME" value="weeks.week1.Week1" />
       <module name="ComputerGraphics" />
       <extension name="coverage">
         <pattern>
@@ -92,11 +88,24 @@
       </method>
     </configuration>
     <configuration name="Week2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="week2.Week2" />
+      <option name="MAIN_CLASS_NAME" value="weeks.week2.Week2" />
       <module name="ComputerGraphics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="week2.*" />
+          <option name="PATTERN" value="weeks.week2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Week3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weeks.week3.Week3" />
+      <module name="ComputerGraphics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="weeks.week3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,6 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Week3" />
         <item itemvalue="Application.Week2" />
         <item itemvalue="Application.Week1" />
       </list>
@@ -139,6 +149,11 @@
       <workItem from="1707187034916" duration="1138000" />
       <workItem from="1707252588455" duration="2413000" />
       <workItem from="1707334375012" duration="6960000" />
+      <workItem from="1707348624053" duration="977000" />
+      <workItem from="1707349636343" duration="329000" />
+      <workItem from="1707361471381" duration="1820000" />
+      <workItem from="1707786157911" duration="3478000" />
+      <workItem from="1707942313865" duration="10780000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -193,6 +208,16 @@
     <MESSAGE value="Week 1 complemeted (enhacing)" />
     <MESSAGE value="New mapper" />
     <option name="LAST_COMMIT_MESSAGE" value="New mapper" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,7 +14,7 @@ public class Rectangle implements CanvasShape {
 
     private int x;
     private int y;
-    private int w ;
+    private int w;
     private int h;
 
     public Rectangle(int x, int y, int w, int h) {

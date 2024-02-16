@@ -1,6 +1,7 @@
 package components.canvas.shapes.line;
 
 import components.canvas.CanvasShape;
+import math.point.Point2D;
 
 import java.awt.*;
 
@@ -13,6 +14,15 @@ public class Line implements CanvasShape {
 
     public Line(LineAlgorithm algorithmType) {
         algorithm = LineProvider.inject(algorithmType);
+    }
+
+    public Line(Point2D point1, Point2D point2, LineAlgorithm algorithmType) {
+        algorithm = LineProvider.inject(algorithmType);
+
+        x1 = (int) point1.x;
+        y1 = (int) point1.y;
+        x2 = (int) point2.x;
+        y2 = (int) point2.y;
     }
 
     public void setX1(int x1) {

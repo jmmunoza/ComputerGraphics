@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Line clipping algorithms added!!!">
-      <change afterPath="$PROJECT_DIR$/src/math/matrix/Matrix3x3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/matrix/Matrix4x4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/matrix/SquareMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/point/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/point/Point3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/point/Point4D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/vector/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/vector/Vector3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/exceptions/InvalidMatrixSizeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/week3/Week3.java" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Math package added">
+      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/coordsdrawer/CoordsDrawer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/point/Point2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/exceptions/InvalidNumericArrayException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/exceptions/LinesMustBeNumericException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/file/FileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/numeric/IntegerArrayCaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/numeric/IntegerChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/string/StringArrayCaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/string/StringSpacesSplitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weeks/week3/SequenceCoords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weeks/week3/files/clothespin.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weeks/week3/files/house.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weeks/week3/files/shrek.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week1/Week1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week1/Week1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week2/Week2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week2/Week2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week3/Week3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week3/Week3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,27 +48,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Week1.executor": "Run",
-    "Application.Week2.executor": "Run",
-    "Application.Week3.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\ComputerGraphics\src\weeks\week3\files" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="weeks.week3" />
       <recent name="math" />
@@ -153,7 +158,10 @@
       <workItem from="1707349636343" duration="329000" />
       <workItem from="1707361471381" duration="1820000" />
       <workItem from="1707786157911" duration="3478000" />
-      <workItem from="1707942313865" duration="10780000" />
+      <workItem from="1707942313865" duration="11229000" />
+      <workItem from="1708028746341" duration="3193000" />
+      <workItem from="1708031963346" duration="4913000" />
+      <workItem from="1708121890288" duration="4621000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -195,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707178243417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Math package added">
+      <option name="closed" value="true" />
+      <created>1707953171099</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707953171099</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +223,8 @@
     <MESSAGE value="Week 1 complemeted" />
     <MESSAGE value="Week 1 complemeted (enhacing)" />
     <MESSAGE value="New mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="New mapper" />
+    <MESSAGE value="Math package added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Math package added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

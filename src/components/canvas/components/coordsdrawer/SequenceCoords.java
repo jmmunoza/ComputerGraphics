@@ -1,4 +1,4 @@
-package weeks.week3;
+package components.canvas.components.coordsdrawer;
 
 import math.point.Point2D;
 import util.exceptions.InvalidNumericArrayException;

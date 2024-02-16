@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Math package added">
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="You can draw!!">
       <change afterPath="$PROJECT_DIR$/src/components/canvas/components/coordsdrawer/CoordsDrawer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/math/point/Point2D.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/util/exceptions/InvalidNumericArrayException.java" afterDir="false" />
@@ -17,7 +17,6 @@
       <change afterPath="$PROJECT_DIR$/src/weeks/week3/SequenceCoords.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/weeks/week3/files/clothespin.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/weeks/week3/files/house.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/week3/files/shrek.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weeks/week3/Week3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week3/Week3.java" afterDir="false" />
@@ -161,7 +160,7 @@
       <workItem from="1707942313865" duration="11229000" />
       <workItem from="1708028746341" duration="3193000" />
       <workItem from="1708031963346" duration="4913000" />
-      <workItem from="1708121890288" duration="4621000" />
+      <workItem from="1708121890288" duration="4945000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -211,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707953171099</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="You can draw!!">
+      <option name="closed" value="true" />
+      <created>1708126836852</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708126836852</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +231,8 @@
     <MESSAGE value="Week 1 complemeted (enhacing)" />
     <MESSAGE value="New mapper" />
     <MESSAGE value="Math package added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Math package added" />
+    <MESSAGE value="You can draw!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="You can draw!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

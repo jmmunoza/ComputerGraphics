@@ -7,7 +7,6 @@ import components.canvas.shapes.line.Line;
 import components.canvas.shapes.line.LineAlgorithm;
 import math.point.Point2D;
 import util.file.FileReader;
-import weeks.week3.SequenceCoords;
 
 import java.awt.*;
 import java.io.FileNotFoundException;

@@ -4,7 +4,6 @@ import components.canvas.CanvasComponent;
 import components.canvas.listeners.CanvasPaintListener;
 import components.canvas.observers.CanvasPaintObserver;
 import components.canvas.shapes.line.Line;
-import components.canvas.shapes.line.LineAlgorithm;
 import math.point.Point2D;
 import util.file.FileReader;
 
@@ -37,7 +36,7 @@ public class CoordsDrawer implements CanvasComponent, CanvasPaintListener {
             Point2D fromPoint = points[from];
             Point2D toPoint = points[to];
 
-            Line line = new Line(fromPoint, toPoint, LineAlgorithm.BRESENHAM);
+            Line line = new Line(fromPoint, toPoint);
 
             lines.add(line);
         }

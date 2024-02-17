@@ -8,7 +8,6 @@ import components.canvas.observers.CanvasMouseObserver;
 import components.canvas.observers.CanvasPaintObserver;
 import components.canvas.observers.CanvasResizeObserver;
 import components.canvas.shapes.line.Line;
-import components.canvas.shapes.line.LineAlgorithm;
 import components.canvas.shapes.rectangle.Rectangle;
 import components.canvas.shapes.text.Text;
 
@@ -30,7 +29,7 @@ public class LineClipping implements CanvasComponent, CanvasPaintListener, Canva
 
     public LineClipping(LineClippingAlgorithm algorithmType) {
         rectangle = new Rectangle(xMin, yMax, xMax - xMin, yMax - yMin);
-        clippedLine = new Line(LineAlgorithm.BRESENHAM);
+        clippedLine = new Line();
         text = new Text(algorithmType.toString());
         algorithm = LineClippingProvider.inject(algorithmType);
     }

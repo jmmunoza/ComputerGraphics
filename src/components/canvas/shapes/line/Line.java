@@ -12,12 +12,21 @@ public class Line implements CanvasShape {
     private int x2 = 0;
     private int y2 = 0;
 
-    public Line(LineAlgorithm algorithmType) {
-        algorithm = LineProvider.inject(algorithmType);
+    public Line() {
+        algorithm = LineProvider.inject(LineAlgorithm.BRESENHAM);
     }
 
-    public Line(Point2D point1, Point2D point2, LineAlgorithm algorithmType) {
-        algorithm = LineProvider.inject(algorithmType);
+    public Line(int x1, int y1, int x2, int y2) {
+        algorithm = LineProvider.inject(LineAlgorithm.BRESENHAM);
+
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+
+    public Line(Point2D point1, Point2D point2) {
+        algorithm = LineProvider.inject(LineAlgorithm.BRESENHAM);
 
         x1 = (int) point1.x;
         y1 = (int) point1.y;

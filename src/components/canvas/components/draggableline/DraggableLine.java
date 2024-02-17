@@ -6,7 +6,6 @@ import components.canvas.listeners.CanvasPaintListener;
 import components.canvas.observers.CanvasMouseObserver;
 import components.canvas.observers.CanvasPaintObserver;
 import components.canvas.shapes.line.Line;
-import components.canvas.shapes.line.LineAlgorithm;
 
 import java.awt.*;
 
@@ -14,7 +13,7 @@ public class DraggableLine implements CanvasComponent, CanvasMouseListener, Canv
     private final Line line;
 
     public DraggableLine() {
-        line = new Line(LineAlgorithm.BRESENHAM);
+        line = new Line();
     }
 
     @Override

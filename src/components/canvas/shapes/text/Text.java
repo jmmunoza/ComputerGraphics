@@ -18,6 +18,23 @@ public class Text implements CanvasShape {
         text = "";
     }
 
+    public Text(int x, int y) {
+        this.x = x;
+        this.y = y;
+        text = "";
+    }
+
+    public Text(int x, int y, String text) {
+        this.x = x;
+        this.y = y;
+        this.text = text;
+    }
+
+    public void setCoords(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public void setText(String text) {
         this.text = text;
     }

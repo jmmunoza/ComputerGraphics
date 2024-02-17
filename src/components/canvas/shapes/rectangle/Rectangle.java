@@ -2,7 +2,6 @@ package components.canvas.shapes.rectangle;
 
 import components.canvas.CanvasShape;
 import components.canvas.shapes.line.Line;
-import components.canvas.shapes.line.LineAlgorithm;
 
 import java.awt.*;
 
@@ -18,10 +17,10 @@ public class Rectangle implements CanvasShape {
     private int h;
 
     public Rectangle(int x, int y, int w, int h) {
-        lineAbove = new Line(LineAlgorithm.BRESENHAM);
-        lineLeft = new Line(LineAlgorithm.BRESENHAM);
-        lineRight = new Line(LineAlgorithm.BRESENHAM);
-        lineTop = new Line(LineAlgorithm.BRESENHAM);
+        lineAbove = new Line();
+        lineLeft = new Line();
+        lineRight = new Line();
+        lineTop = new Line();
 
         this.x = x;
         this.y = y;

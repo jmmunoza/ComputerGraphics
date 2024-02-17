@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Week3 {
+public class Week3DrawHouse {
     public static void main(String[] args) throws FileNotFoundException {
         List<CanvasComponent> components = generateCanvasComponents();
         Canvas canvas = new Canvas(components);

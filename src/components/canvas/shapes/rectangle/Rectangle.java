@@ -1,51 +1,37 @@
 package components.canvas.shapes.rectangle;
 
-import components.canvas.CanvasShape;
+import components.canvas.shapes.ShapeComposite;
 import components.canvas.shapes.line.Line;
 
-import java.awt.*;
-
-public class Rectangle implements CanvasShape {
+public class Rectangle extends ShapeComposite {
     private final Line lineTop;
     private final Line lineRight;
     private final Line lineLeft;
     private final Line lineAbove;
 
-    private int x;
-    private int y;
-    private int w;
-    private int h;
+    private final int w;
+    private final int h;
 
     public Rectangle(int x, int y, int w, int h) {
+        super(x, y);
+
         lineAbove = new Line();
         lineLeft = new Line();
         lineRight = new Line();
         lineTop = new Line();
 
-        this.x = x;
-        this.y = y;
         this.h = h;
         this.w = w;
+
+        add(lineAbove);
+        add(lineLeft);
+        add(lineRight);
+        add(lineTop);
+
+        setCoords();
     }
 
-    public void setH(int h) {
-        this.h = h;
-    }
-
-    public void setW(int w) {
-        this.w = w;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    @Override
-    public void draw(Graphics g) {
+    private void setCoords() {
         lineAbove.setX1(x);
         lineAbove.setX2(x + w);
         lineAbove.setY1(y);
@@ -65,10 +51,15 @@ public class Rectangle implements CanvasShape {
         lineRight.setX2(x + w);
         lineRight.setY1(y - h);
         lineRight.setY2(y);
+    }
 
-        lineTop.draw(g);
-        lineRight.draw(g);
-        lineLeft.draw(g);
-        lineAbove.draw(g);
+    @Override
+    public int getWidth() {
+        return w;
+    }
+
+    @Override
+    public int getHeight() {
+        return h;
     }
 }

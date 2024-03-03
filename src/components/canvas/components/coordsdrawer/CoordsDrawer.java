@@ -1,8 +1,6 @@
 package components.canvas.components.coordsdrawer;
 
-import components.canvas.CanvasComponent;
-import components.canvas.listeners.CanvasPaintListener;
-import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.shapes.ShapeComposite;
 import components.canvas.shapes.line.Line;
 import math.point.Point2D;
 import util.file.FileReader;
@@ -12,15 +10,16 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoordsDrawer implements CanvasComponent, CanvasPaintListener {
-
-    private final List<Line> lines;
+public class CoordsDrawer extends ShapeComposite {
 
     public CoordsDrawer(String coordsSequenceFilePath) throws FileNotFoundException {
         List<String> textLines = FileReader.read(coordsSequenceFilePath);
         SequenceCoords sequenceCoordsToDraw = SequenceCoords.generateFromTextLines(textLines);
 
-        lines = generateLinesFromSequenceCoords(sequenceCoordsToDraw);
+        List<Line> lines = generateLinesFromSequenceCoords(sequenceCoordsToDraw);
+
+        addLines(lines);
+        setColor(Color.DARK_GRAY);
     }
 
     private static List<Line> generateLinesFromSequenceCoords(SequenceCoords sequenceCoords) {
@@ -44,14 +43,8 @@ public class CoordsDrawer implements CanvasComponent, CanvasPaintListener {
         return lines;
     }
 
-    @Override
-    public void onPaint(Graphics g) {
-        g.setColor(Color.DARK_GRAY);
-        for (Line line : lines) line.draw(g);
-    }
-
-    @Override
-    public void subscribe() {
-        CanvasPaintObserver.attachListener(this);
+    private void addLines(List<Line> lines) {
+        Line[] array = new Line[lines.size()];
+        add(lines.toArray(array));
     }
 }

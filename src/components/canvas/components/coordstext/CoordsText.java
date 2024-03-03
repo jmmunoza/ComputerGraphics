@@ -1,54 +1,34 @@
 package components.canvas.components.coordstext;
 
-import components.canvas.CanvasComponent;
-import components.canvas.listeners.CanvasPaintListener;
-import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.shapes.ShapeComposite;
 import components.canvas.shapes.circle.Circle;
 import components.canvas.shapes.text.Text;
 
 import java.awt.*;
 
-public class CoordsText implements CanvasComponent, CanvasPaintListener {
+public class CoordsText extends ShapeComposite {
     private final Text text;
     private final Circle circle;
-    private boolean show;
 
     public CoordsText() {
-        int radius = 6;
+        super(Color.DARK_GRAY);
 
-        this.text = new Text();
-        this.circle = new Circle(radius);
-        show = true;
+        text = new Text();
+        circle = new Circle(6);
+
+        add(text);
+        add(circle);
     }
 
     public void setCoords(int x, int y) {
         String positionText = "(" + x + ", " + y + ")";
-
         int padding = 10;
-        text.setCoords(x + padding, y + padding);
+
         text.setText(positionText);
+        text.setX(x + padding);
+        text.setY(y + padding);
 
-        circle.setCoords(x, y);
-    }
-
-    public void show() {
-        show = true;
-    }
-
-    public void hide() {
-        show = false;
-    }
-
-    @Override
-    public void onPaint(Graphics g) {
-        if (!show) return;
-
-        text.draw(g);
-        circle.draw(g);
-    }
-
-    @Override
-    public void subscribe() {
-        CanvasPaintObserver.attachListener(this);
+        circle.setX(x);
+        circle.setY(y);
     }
 }

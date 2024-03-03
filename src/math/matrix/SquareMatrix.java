@@ -1,6 +1,7 @@
 package math.matrix;
 
 import math.point.Point;
+import math.vector.Vector;
 import util.exceptions.InvalidMatrixSizeException;
 
 public class SquareMatrix {
@@ -44,6 +45,14 @@ public class SquareMatrix {
         }
 
         return new Point(A.matrixSize, timedElements);
+    }
+
+    protected static Vector times(SquareMatrix A, Vector v) {
+        Point p = new Point(v.components.length, v.components);
+
+        Point result = times(A, p);
+
+        return new Vector(v.components.length, result.coords);
     }
 
     protected static SquareMatrix times(SquareMatrix A, SquareMatrix B) {

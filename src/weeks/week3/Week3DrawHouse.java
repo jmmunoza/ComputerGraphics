@@ -1,36 +1,35 @@
 package weeks.week3;
 
 import components.canvas.Canvas;
-import components.canvas.CanvasComponent;
 import components.canvas.components.cartesianplane.CartesianPlane;
 import components.canvas.components.coordsdrawer.CoordsDrawer;
 import components.canvas.components.dimensiontext.DimensionText;
 import components.canvas.components.positiontext.PositionText;
+import components.canvas.shapes.ShapeComposite;
 import components.frame.Frame;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Week3DrawHouse {
     public static void main(String[] args) throws FileNotFoundException {
-        List<CanvasComponent> components = generateCanvasComponents();
-        Canvas canvas = new Canvas(components);
+        ShapeComposite composite = generateCanvasComponents();
+        Canvas canvas = new Canvas(composite);
 
         Frame frame = new Frame("Week 3 - Drawing", canvas);
         frame.show();
     }
 
-    public static List<CanvasComponent> generateCanvasComponents() throws FileNotFoundException {
-        List<CanvasComponent> components = new ArrayList<>();
+    public static ShapeComposite generateCanvasComponents() throws FileNotFoundException {
+        ShapeComposite composite = new ShapeComposite();
 
-        components.add(new CartesianPlane());
-        components.add(new CoordsDrawer(getClothespinPath()));
-        components.add(new CoordsDrawer(getHousePath()));
-        components.add(new DimensionText());
-        components.add(new PositionText());
+        composite.add(
+                new CartesianPlane(),
+                new CoordsDrawer(getClothespinPath()),
+                new CoordsDrawer(getHousePath()),
+                new DimensionText(),
+                new PositionText());
 
-        return components;
+        return composite;
     }
 
     public static String getHousePath() {

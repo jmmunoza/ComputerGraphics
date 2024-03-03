@@ -1,7 +1,6 @@
 package components.canvas.shapes.line.algorithms;
 
 import components.canvas.shapes.line.ILineAlgorithm;
-import components.canvas.shapes.pixel.Pixel;
 
 import java.awt.*;
 
@@ -24,7 +23,7 @@ public class Bresenham implements ILineAlgorithm {
 
         if (dx >= dy) {
             while (true) {
-                Pixel.setPixel(g, x, y);
+                // Pixel.setPixel(g, x, y);
                 if (x == x2)
                     break;
                 x += ix;
@@ -36,7 +35,7 @@ public class Bresenham implements ILineAlgorithm {
             }
         } else {
             while (true) {
-                Pixel.setPixel(g, x, y);
+                //Pixel.setPixel(g, x, y);
                 if (y == y2)
                     break;
                 y += iy;

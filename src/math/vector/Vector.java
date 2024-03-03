@@ -4,7 +4,7 @@ public class Vector {
     private final int dimension;
     public double[] components;
 
-    protected Vector(int dimension, double[] components) {
+    public Vector(int dimension, double[] components) {
         this.dimension = dimension;
         this.components = components;
     }

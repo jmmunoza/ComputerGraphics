@@ -1,67 +1,30 @@
 package components.canvas.shapes.circle;
 
 import components.canvas.CanvasMapper;
-import components.canvas.CanvasShape;
+import components.canvas.shapes.BaseShape;
 
 import java.awt.*;
 
-public class Circle implements CanvasShape {
-    private int x;
-    private int y;
-    private int radius;
-    private boolean show;
+public class Circle extends BaseShape {
+    private final int radius;
 
     public Circle(int x, int y, int radius) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
+
         this.radius = radius;
-        this.show = true;
     }
 
     public Circle(int radius) {
         this(0, 0, radius);
     }
 
-    public void show() {
-        show = true;
-    }
-
-    public void hide() {
-        show = false;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setCoords(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
     public int getRadius() {
         return radius;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
     @Override
     public void draw(Graphics g) {
-        if (!show) return;
+        if (hidden) return;
 
         int h = g.getClipBounds().height;
         int w = g.getClipBounds().width;
@@ -72,6 +35,17 @@ public class Circle implements CanvasShape {
         int centeredX = mappedX - radius / 2;
         int centeredY = mappedY - radius / 2;
 
+        g.setColor(color);
         g.drawOval(centeredX, centeredY, radius, radius);
+    }
+
+    @Override
+    public int getWidth() {
+        return radius * 2;
+    }
+
+    @Override
+    public int getHeight() {
+        return radius * 2;
     }
 }

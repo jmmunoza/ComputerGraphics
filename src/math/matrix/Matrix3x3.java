@@ -2,6 +2,8 @@ package math.matrix;
 
 import math.point.Point;
 import math.point.Point3D;
+import math.vector.Vector;
+import math.vector.Vector3D;
 
 public class Matrix3x3 extends SquareMatrix {
     private static final int MATRIX_SIZE = 3;
@@ -27,6 +29,13 @@ public class Matrix3x3 extends SquareMatrix {
 
         return new Point3D(point.coords);
     }
+
+    public static Vector3D times(Matrix3x3 A, Vector3D v) {
+        Vector vector = SquareMatrix.times(A, v);
+
+        return new Vector3D(vector.components);
+    }
+
 
     public static Matrix3x3 add(Matrix3x3 A, Matrix3x3 B) {
         SquareMatrix matrix = SquareMatrix.add(A, B);

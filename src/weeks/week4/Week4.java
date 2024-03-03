@@ -1,32 +1,29 @@
-package weeks.week1;
+package weeks.week4;
 
 import components.canvas.Canvas;
+import components.canvas.components.car.Car;
 import components.canvas.components.cartesianplane.CartesianPlane;
 import components.canvas.components.dimensiontext.DimensionText;
-import components.canvas.components.draggableline.DraggableLine;
-import components.canvas.components.positiontext.PositionText;
 import components.canvas.shapes.ShapeComposite;
 import components.frame.Frame;
 
-import javax.swing.*;
+import java.io.FileNotFoundException;
 
-public class Week1 {
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(Week1::run);
-    }
-
-    public static void run() {
+public class Week4 {
+    public static void main(String[] args) throws FileNotFoundException {
         ShapeComposite composite = new ShapeComposite();
         composite.add(
                 new CartesianPlane(),
-                new DraggableLine(),
-                new PositionText(),
+                new Car(getCarPath()),
                 new DimensionText());
 
         Canvas canvas = new Canvas(composite);
 
-        Frame frame = new Frame("Week 1 - Bresenham's algorithm", canvas);
+        Frame frame = new Frame("Week 2 - Line clipping", canvas);
         frame.show();
+    }
+
+    public static String getCarPath() {
+        return "src/weeks/week4/files/car.txt";
     }
 }

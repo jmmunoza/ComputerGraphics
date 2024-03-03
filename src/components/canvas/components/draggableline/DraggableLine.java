@@ -1,19 +1,22 @@
 package components.canvas.components.draggableline;
 
-import components.canvas.CanvasComponent;
 import components.canvas.listeners.CanvasMouseListener;
-import components.canvas.listeners.CanvasPaintListener;
 import components.canvas.observers.CanvasMouseObserver;
-import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.shapes.ShapeComposite;
 import components.canvas.shapes.line.Line;
 
 import java.awt.*;
 
-public class DraggableLine implements CanvasComponent, CanvasMouseListener, CanvasPaintListener {
+public class DraggableLine extends ShapeComposite implements CanvasMouseListener {
     private final Line line;
 
     public DraggableLine() {
         line = new Line();
+
+        add(line);
+        setColor(Color.LIGHT_GRAY);
+
+        CanvasMouseObserver.attachListener(this);
     }
 
     @Override
@@ -49,20 +52,5 @@ public class DraggableLine implements CanvasComponent, CanvasMouseListener, Canv
     @Override
     public void onMousedExited(int x, int y) {
 
-    }
-
-    @Override
-    public void onPaint(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
-
-        g2d.setColor(Color.WHITE);
-
-        line.draw(g);
-    }
-
-    @Override
-    public void subscribe() {
-        CanvasMouseObserver.attachListener(this);
-        CanvasPaintObserver.attachListener(this);
     }
 }

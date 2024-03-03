@@ -1,75 +1,68 @@
 package components.canvas.components.positiontext;
 
-import components.canvas.CanvasComponent;
 import components.canvas.listeners.CanvasMouseListener;
-import components.canvas.listeners.CanvasPaintListener;
 import components.canvas.observers.CanvasMouseObserver;
-import components.canvas.observers.CanvasPaintObserver;
+import components.canvas.shapes.ShapeComposite;
+import components.canvas.shapes.circle.Circle;
 import components.canvas.shapes.text.Text;
 
 import java.awt.*;
 
-public class PositionText implements CanvasComponent, CanvasMouseListener, CanvasPaintListener {
-    private final Text text;
-    private int x = 0;
-    private int y = 0;
-    private boolean show = false;
+public class PositionText extends ShapeComposite implements CanvasMouseListener {
+    private final Text textShape;
+    private final Circle circle;
 
     public PositionText() {
-        text = new Text();
+        textShape = new Text();
+        circle = new Circle(5);
+
+        add(textShape, circle);
+
+        CanvasMouseObserver.attachListener(this);
+
+        setColor(Color.WHITE);
+        hide();
     }
 
     @Override
     public void onMouseDragged(int x, int y) {
-        this.x = x;
-        this.y = y;
+        updatePosition(x, y);
     }
 
     @Override
     public void onMouseMoved(int x, int y) {
-        this.x = x;
-        this.y = y;
+        updatePosition(x, y);
     }
 
     @Override
     public void onMousePressed(int x, int y) {
-
+        setColor(Color.DARK_GRAY);
     }
 
     @Override
     public void onMouseReleased(int x, int y) {
-
+        setColor(Color.WHITE);
     }
 
     @Override
     public void onMouseEntered(int x, int y) {
-        show = true;
+        show();
     }
 
     @Override
     public void onMousedExited(int x, int y) {
-        show = false;
+        hide();
     }
 
-    @Override
-    public void onPaint(Graphics g) {
-        if (!show) return;
-
+    private void updatePosition(int x, int y) {
+        String text = "(" + x + ", " + y + ")";
         int padding = 5;
 
-        text.setX(x + padding);
-        text.setY(y + padding);
+        textShape.setText(text);
+        textShape.setX(x + padding);
+        textShape.setY(y + padding);
 
-        String positionText = "(" + x + ", " + y + ")";
-        g.setColor(Color.WHITE);
-
-        text.setText(positionText);
-        text.draw(g);
-    }
-
-    @Override
-    public void subscribe() {
-        CanvasMouseObserver.attachListener(this);
-        CanvasPaintObserver.attachListener(this);
+        circle.setX(x);
+        circle.setY(y);
     }
 }

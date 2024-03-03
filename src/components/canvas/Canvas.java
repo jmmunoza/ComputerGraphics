@@ -1,33 +1,32 @@
 package components.canvas;
 
+import components.canvas.observers.CanvasKeyArrowObserver;
 import components.canvas.observers.CanvasMouseObserver;
-import components.canvas.observers.CanvasPaintObserver;
 import components.canvas.observers.CanvasResizeObserver;
+import components.canvas.shapes.ShapeComposite;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.List;
 
-public class Canvas extends JPanel implements MouseMotionListener, ComponentListener, MouseListener {
+public class Canvas extends JPanel implements MouseMotionListener, ComponentListener, MouseListener, KeyListener {
+    private final ShapeComposite components;
 
-    public Canvas(List<CanvasComponent> components) {
-        for (CanvasComponent component : components) {
-            component.subscribe();
-        }
-
+    public Canvas(ShapeComposite components) {
+        this.components = components;
         this.setBackground(Color.BLACK);
-
+        this.setFocusable(true);
         this.addMouseMotionListener(this);
         this.addComponentListener(this);
         this.addMouseListener(this);
+        this.addKeyListener(this);
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        CanvasPaintObserver.notifyOnPaint(g);
+        components.draw(g);
     }
 
     @Override
@@ -117,5 +116,27 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
         CanvasMouseObserver.notifyOnMouseMoved(mappedX, mappedY);
 
         repaint();
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_UP -> CanvasKeyArrowObserver.notifyOnUpPressed();
+            case KeyEvent.VK_DOWN -> CanvasKeyArrowObserver.notifyOnDownPressed();
+            case KeyEvent.VK_RIGHT -> CanvasKeyArrowObserver.notifyOnRightPressed();
+            case KeyEvent.VK_LEFT -> CanvasKeyArrowObserver.notifyOnLeftPressed();
+        }
+
+        repaint();
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 }

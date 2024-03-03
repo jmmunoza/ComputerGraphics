@@ -19,7 +19,7 @@ public class Week4 {
 
         Canvas canvas = new Canvas(composite);
 
-        Frame frame = new Frame("Week 2 - Line clipping", canvas);
+        Frame frame = new Frame("Week 4 - Transformations", canvas);
         frame.show();
     }
 

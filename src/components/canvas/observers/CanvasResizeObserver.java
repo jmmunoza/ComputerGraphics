@@ -27,7 +27,7 @@ public class CanvasResizeObserver {
         listeners.remove(listener);
     }
 
-    public static void notifyOnResize(int width, int height) {
+    public static void notifyOnResize(double width, double height) {
         if (listeners == null) new CanvasResizeObserver();
 
         for (CanvasResizeListener listener : listeners) {

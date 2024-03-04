@@ -26,7 +26,7 @@ public class CanvasMouseObserver {
         listeners.remove(listener);
     }
 
-    public static void notifyOnMouseMoved(int x, int y) {
+    public static void notifyOnMouseMoved(double x, double y) {
         if (listeners == null) new CanvasMouseObserver();
 
         for (CanvasMouseListener listener : listeners) {
@@ -34,7 +34,7 @@ public class CanvasMouseObserver {
         }
     }
 
-    public static void notifyOnMouseDragged(int x, int y) {
+    public static void notifyOnMouseDragged(double x, double y) {
         if (listeners == null) new CanvasMouseObserver();
 
         for (CanvasMouseListener listener : listeners) {
@@ -42,7 +42,7 @@ public class CanvasMouseObserver {
         }
     }
 
-    public static void notifyOnMousePressed(int x, int y) {
+    public static void notifyOnMousePressed(double x, double y) {
         if (listeners == null) new CanvasMouseObserver();
 
         for (CanvasMouseListener listener : listeners) {
@@ -50,7 +50,7 @@ public class CanvasMouseObserver {
         }
     }
 
-    public static void notifyOnMouseReleased(int x, int y) {
+    public static void notifyOnMouseReleased(double x, double y) {
         if (listeners == null) new CanvasMouseObserver();
 
         for (CanvasMouseListener listener : listeners) {
@@ -58,7 +58,7 @@ public class CanvasMouseObserver {
         }
     }
 
-    public static void notifyOnMouseEntered(int x, int y) {
+    public static void notifyOnMouseEntered(double x, double y) {
         if (listeners == null) new CanvasMouseObserver();
 
         for (CanvasMouseListener listener : listeners) {
@@ -66,7 +66,7 @@ public class CanvasMouseObserver {
         }
     }
 
-    public static void notifyOnMouseExited(int x, int y) {
+    public static void notifyOnMouseExited(double x, double y) {
         if (listeners == null) new CanvasMouseObserver();
 
         for (CanvasMouseListener listener : listeners) {

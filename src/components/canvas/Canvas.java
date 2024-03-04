@@ -1,6 +1,7 @@
 package components.canvas;
 
 import components.canvas.observers.CanvasKeyArrowObserver;
+import components.canvas.observers.CanvasKeyObserver;
 import components.canvas.observers.CanvasMouseObserver;
 import components.canvas.observers.CanvasResizeObserver;
 import components.canvas.shapes.ShapeComposite;
@@ -60,8 +61,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
-        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+        double mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        double mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
 
         CanvasMouseObserver.notifyOnMousePressed(mappedX, mappedY);
 
@@ -70,8 +71,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
-        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+        double mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        double mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
 
         CanvasMouseObserver.notifyOnMouseReleased(mappedX, mappedY);
 
@@ -80,8 +81,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
-        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+        double mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        double mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
 
         CanvasMouseObserver.notifyOnMouseEntered(mappedX, mappedY);
 
@@ -90,8 +91,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mouseExited(MouseEvent e) {
-        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
-        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+        double mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        double mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
 
         CanvasMouseObserver.notifyOnMouseExited(mappedX, mappedY);
 
@@ -100,8 +101,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
-        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+        double mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        double mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
 
         CanvasMouseObserver.notifyOnMouseDragged(mappedX, mappedY);
 
@@ -110,8 +111,8 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        int mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
-        int mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
+        double mappedX = CanvasMapper.mapXjToXp(e.getX(), getWidth());
+        double mappedY = CanvasMapper.mapYjToYp(e.getY(), getHeight());
 
         CanvasMouseObserver.notifyOnMouseMoved(mappedX, mappedY);
 
@@ -130,6 +131,7 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
             case KeyEvent.VK_DOWN -> CanvasKeyArrowObserver.notifyOnDownPressed();
             case KeyEvent.VK_RIGHT -> CanvasKeyArrowObserver.notifyOnRightPressed();
             case KeyEvent.VK_LEFT -> CanvasKeyArrowObserver.notifyOnLeftPressed();
+            default -> CanvasKeyObserver.notifyOnKeyPressed(e.getKeyCode());
         }
 
         repaint();

@@ -25,44 +25,54 @@ public class PositionText extends ShapeComposite implements CanvasMouseListener 
     }
 
     @Override
-    public void onMouseDragged(int x, int y) {
+    public void onMouseDragged(double x, double y) {
         updatePosition(x, y);
     }
 
     @Override
-    public void onMouseMoved(int x, int y) {
+    public void onMouseMoved(double x, double y) {
         updatePosition(x, y);
     }
 
     @Override
-    public void onMousePressed(int x, int y) {
+    public void onMousePressed(double x, double y) {
         setColor(Color.DARK_GRAY);
     }
 
     @Override
-    public void onMouseReleased(int x, int y) {
+    public void onMouseReleased(double x, double y) {
         setColor(Color.WHITE);
     }
 
     @Override
-    public void onMouseEntered(int x, int y) {
+    public void onMouseEntered(double x, double y) {
         show();
     }
 
     @Override
-    public void onMousedExited(int x, int y) {
+    public void onMousedExited(double x, double y) {
         hide();
     }
 
-    private void updatePosition(int x, int y) {
-        String text = "(" + x + ", " + y + ")";
+    private void updatePosition(double x, double y) {
+        String text = "(" + (int) x + ", " + (int) y + ")";
         int padding = 5;
 
         textShape.setText(text);
         textShape.setX(x + padding);
         textShape.setY(y + padding);
 
-        circle.setX(x);
-        circle.setY(y);
+        circle.setX(x - circle.getRadius() / 2);
+        circle.setY(y + circle.getRadius() / 2);
+    }
+
+    @Override
+    public double getWidth() {
+        return 0;
+    }
+
+    @Override
+    public double getHeight() {
+        return 0;
     }
 }

@@ -6,19 +6,19 @@ import components.canvas.shapes.BaseShape;
 import java.awt.*;
 
 public class Circle extends BaseShape {
-    private final int radius;
+    private final double radius;
 
-    public Circle(int x, int y, int radius) {
+    public Circle(double x, double y, double radius) {
         super(x, y);
 
         this.radius = radius;
     }
 
-    public Circle(int radius) {
+    public Circle(double radius) {
         this(0, 0, radius);
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
@@ -29,23 +29,31 @@ public class Circle extends BaseShape {
         int h = g.getClipBounds().height;
         int w = g.getClipBounds().width;
 
-        int mappedX = CanvasMapper.mapXpToXj(x, w);
-        int mappedY = CanvasMapper.mapYpToYj(y, h);
-
-        int centeredX = mappedX - radius / 2;
-        int centeredY = mappedY - radius / 2;
+        double mappedX = CanvasMapper.mapXpToXj(x, w);
+        double mappedY = CanvasMapper.mapYpToYj(y, h);
 
         g.setColor(color);
-        g.drawOval(centeredX, centeredY, radius, radius);
+        g.drawOval((int) mappedX, (int) mappedY, (int) radius, (int) radius);
     }
 
     @Override
-    public int getWidth() {
+    public double getWidth() {
         return radius * 2;
     }
 
     @Override
-    public int getHeight() {
+    public double getHeight() {
         return radius * 2;
+    }
+
+    @Override
+    public double getYCenter() {
+        return y - radius / 2;
+
+    }
+
+    @Override
+    public double getXCenter() {
+        return x + radius / 2;
     }
 }

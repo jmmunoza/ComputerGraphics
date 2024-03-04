@@ -23,6 +23,7 @@ public class Bresenham implements ILineAlgorithm {
 
         if (dx >= dy) {
             while (true) {
+                g.drawOval(x, y, 1, 1);
                 // Pixel.setPixel(g, x, y);
                 if (x == x2)
                     break;
@@ -35,6 +36,7 @@ public class Bresenham implements ILineAlgorithm {
             }
         } else {
             while (true) {
+                g.drawOval(x, y, 1, 1);
                 //Pixel.setPixel(g, x, y);
                 if (y == y2)
                     break;

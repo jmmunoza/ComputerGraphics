@@ -9,10 +9,10 @@ public class Rectangle extends ShapeComposite {
     private final Line lineLeft;
     private final Line lineAbove;
 
-    private final int w;
-    private final int h;
+    private double w;
+    private double h;
 
-    public Rectangle(int x, int y, int w, int h) {
+    public Rectangle(double x, double y, double w, double h) {
         super(x, y);
 
         lineAbove = new Line();
@@ -54,12 +54,28 @@ public class Rectangle extends ShapeComposite {
     }
 
     @Override
-    public int getWidth() {
-        return w;
+    public void setX(double x) {
+        super.setX(x);
+
+        setCoords();
     }
 
     @Override
-    public int getHeight() {
-        return h;
+    public void setY(double y) {
+        super.setY(y);
+
+        setCoords();
+    }
+
+    public void setW(double w) {
+        this.w = w;
+
+        setCoords();
+    }
+
+    public void setH(double h) {
+        this.h = h;
+
+        setCoords();
     }
 }

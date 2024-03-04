@@ -4,6 +4,7 @@ import components.canvas.Canvas;
 import components.canvas.components.car.Car;
 import components.canvas.components.cartesianplane.CartesianPlane;
 import components.canvas.components.dimensiontext.DimensionText;
+import components.canvas.components.positiontext.PositionText;
 import components.canvas.shapes.ShapeComposite;
 import components.frame.Frame;
 
@@ -15,6 +16,7 @@ public class Week4 {
         composite.add(
                 new CartesianPlane(),
                 new Car(getCarPath()),
+                new PositionText(),
                 new DimensionText());
 
         Canvas canvas = new Canvas(composite);

@@ -13,8 +13,8 @@ public class LineSegmentVisualizer extends ShapeComposite {
         CoordsText interceptionPoint = new CoordsText();
         interceptionPoint.setColor(Color.ORANGE);
 
-        Line lineShape1 = new Line((int) line1.x1, (int) line1.y1, (int) line1.x2, (int) line1.y2);
-        Line lineShape2 = new Line((int) line2.x1, (int) line2.y1, (int) line2.x2, (int) line2.y2);
+        Line lineShape1 = new Line(line1.x1, line1.y1, line1.x2, line1.y2);
+        Line lineShape2 = new Line(line2.x1, line2.y1, line2.x2, line2.y2);
 
         lineShape1.setColor(Color.DARK_GRAY);
         lineShape2.setColor(Color.DARK_GRAY);

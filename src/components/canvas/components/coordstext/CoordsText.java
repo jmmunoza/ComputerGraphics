@@ -20,15 +20,25 @@ public class CoordsText extends ShapeComposite {
         add(circle);
     }
 
-    public void setCoords(int x, int y) {
-        String positionText = "(" + x + ", " + y + ")";
+    public void setCoords(double x, double y) {
+        String positionText = "(" + (int) x + ", " + (int) y + ")";
         int padding = 10;
 
         text.setText(positionText);
         text.setX(x + padding);
         text.setY(y + padding);
 
-        circle.setX(x);
-        circle.setY(y);
+        circle.setX(x - circle.getRadius() / 2);
+        circle.setY(y + circle.getRadius() / 2);
+    }
+
+    @Override
+    public double getWidth() {
+        return 0;
+    }
+
+    @Override
+    public double getHeight() {
+        return 0;
     }
 }

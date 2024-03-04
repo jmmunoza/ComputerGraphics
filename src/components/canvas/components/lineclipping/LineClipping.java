@@ -16,14 +16,14 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
     private final ILineClippingAlgorithm algorithm;
     private final Line clippedLine;
     private final Line line;
-    private final int xMax = 200;
-    private final int xMin = -200;
-    private final int yMax = 100;
-    private final int yMin = -100;
-    private int x1 = 0;
-    private int y1 = 0;
-    private int x2 = 0;
-    private int y2 = 0;
+    private final double xMax = 200;
+    private final double xMin = -200;
+    private final double yMax = 100;
+    private final double yMin = -100;
+    private double x1 = 0;
+    private double y1 = 0;
+    private double x2 = 0;
+    private double y2 = 0;
 
     public LineClipping(LineClippingAlgorithm algorithmType) {
         Rectangle rectangle = new Rectangle(xMin, yMax, xMax - xMin, yMax - yMin);
@@ -52,7 +52,7 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
         line.setX2(x2);
         line.setY2(y2);
 
-        boolean draw = algorithm.clip(clippedLine, x1, y1, x2, y2, xMin, yMin, xMax, yMax);
+        boolean draw = algorithm.clip(clippedLine, (int) x1, (int) y1, (int) x2, (int) y2, (int) xMin, (int) yMin, (int) xMax, (int) yMax);
 
         if (draw) {
             clippedLine.show();
@@ -62,7 +62,7 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
     }
 
     @Override
-    public void onMouseDragged(int x, int y) {
+    public void onMouseDragged(double x, double y) {
         x2 = x;
         y2 = y;
 
@@ -70,12 +70,12 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
     }
 
     @Override
-    public void onMouseMoved(int x, int y) {
+    public void onMouseMoved(double x, double y) {
 
     }
 
     @Override
-    public void onMousePressed(int x, int y) {
+    public void onMousePressed(double x, double y) {
         x1 = x;
         y1 = y;
         x2 = x;
@@ -85,7 +85,7 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
     }
 
     @Override
-    public void onMouseReleased(int x, int y) {
+    public void onMouseReleased(double x, double y) {
         x2 = x;
         y2 = y;
 
@@ -93,17 +93,17 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
     }
 
     @Override
-    public void onMouseEntered(int x, int y) {
+    public void onMouseEntered(double x, double y) {
 
     }
 
     @Override
-    public void onMousedExited(int x, int y) {
+    public void onMousedExited(double x, double y) {
 
     }
 
     @Override
-    public void onResize(int width, int height) {
+    public void onResize(double width, double height) {
         text.setX(-width / 2 + 10);
         text.setY(height / 2 - 20);
     }

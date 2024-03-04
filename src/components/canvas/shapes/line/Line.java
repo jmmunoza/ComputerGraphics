@@ -10,12 +10,12 @@ import java.awt.*;
 
 public class Line extends BaseShape {
     private final ILineAlgorithm algorithm;
-    private int x1;
-    private int y1;
-    private int x2;
-    private int y2;
+    private double x1;
+    private double y1;
+    private double x2;
+    private double y2;
 
-    public Line(int x1, int y1, int x2, int y2) {
+    public Line(double x1, double y1, double x2, double y2) {
         super(x1, y1);
 
         algorithm = LineProvider.inject(LineAlgorithm.BRESENHAM);
@@ -31,7 +31,7 @@ public class Line extends BaseShape {
     }
 
     public Line(Point2D point1, Point2D point2) {
-        this((int) point1.x, (int) point1.y, (int) point2.x, (int) point2.y);
+        this(point1.x, point1.y, point2.x, point2.y);
     }
 
     @Override
@@ -41,14 +41,14 @@ public class Line extends BaseShape {
         int h = g.getClipBounds().height;
         int w = g.getClipBounds().width;
 
-        int mappedX1 = CanvasMapper.mapXpToXj(x1, w);
-        int mappedY1 = CanvasMapper.mapYpToYj(y1, h);
-        int mappedX2 = CanvasMapper.mapXpToXj(x2, w);
-        int mappedY2 = CanvasMapper.mapYpToYj(y2, h);
+        double mappedX1 = CanvasMapper.mapXpToXj(x1, w);
+        double mappedY1 = CanvasMapper.mapYpToYj(y1, h);
+        double mappedX2 = CanvasMapper.mapXpToXj(x2, w);
+        double mappedY2 = CanvasMapper.mapYpToYj(y2, h);
 
         g.setColor(color);
-        g.drawLine(mappedX1, mappedY1, mappedX2, mappedY2);
-        // algorithm.drawLine(g, x1, y1, x2, y2);
+
+        algorithm.drawLine(g, (int) mappedX1, (int) mappedY1, (int) mappedX2, (int) mappedY2);
     }
 
     @Override
@@ -63,38 +63,48 @@ public class Line extends BaseShape {
     }
 
     @Override
-    public int getX() {
+    public double getX() {
         return Math.min(x1, x2);
     }
 
     @Override
-    public int getY() {
+    public double getY() {
         return Math.max(y1, y2);
     }
 
     @Override
-    public int getWidth() {
-        return Math.abs(x2 - x1);
+    public double getWidth() {
+        return Math.abs(Math.max(x1, x2) - Math.min(x1, x2));
     }
 
     @Override
-    public int getHeight() {
-        return Math.abs(y2 - y1);
+    public double getHeight() {
+        return Math.abs(Math.max(y1, y2) - Math.min(y1, y2));
     }
 
-    public void setY2(int y2) {
+    public void setY2(double y2) {
         this.y2 = y2;
     }
 
-    public void setY1(int y1) {
+    public void setY1(double y1) {
         this.y1 = y1;
     }
 
-    public void setX2(int x2) {
+    public void setX2(double x2) {
         this.x2 = x2;
     }
 
-    public void setX1(int x1) {
+    public void setX1(double x1) {
         this.x1 = x1;
+    }
+
+    @Override
+    public double getXCenter() {
+        return Math.abs(x2 - x1) / 2;
+    }
+
+    @Override
+    public double getYCenter() {
+        return Math.abs(y2 - y1) / 2;
     }
 }

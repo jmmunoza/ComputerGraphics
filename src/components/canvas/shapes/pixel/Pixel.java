@@ -6,11 +6,11 @@ import components.canvas.shapes.BaseShape;
 import java.awt.*;
 
 public class Pixel extends BaseShape {
-    public Pixel(int x, int y, Color color) {
+    public Pixel(double x, double y, Color color) {
         super(x, y, color);
     }
 
-    public Pixel(int x, int y) {
+    public Pixel(double x, double y) {
         super(x, y);
     }
 
@@ -21,20 +21,20 @@ public class Pixel extends BaseShape {
         int width = g.getClipBounds().width;
         int height = g.getClipBounds().height;
 
-        int mappedX = CanvasMapper.mapXpToXj(x, width);
-        int mappedY = CanvasMapper.mapYpToYj(y, height);
+        double mappedX = CanvasMapper.mapXpToXj(x, width);
+        double mappedY = CanvasMapper.mapYpToYj(y, height);
 
         g.setColor(color);
-        g.drawOval(mappedX, mappedY, 1, 1);
+        g.drawOval((int) mappedX, (int) mappedY, 1, 1);
     }
 
     @Override
-    public int getHeight() {
+    public double getHeight() {
         return 1;
     }
 
     @Override
-    public int getWidth() {
+    public double getWidth() {
         return 1;
     }
 }

@@ -8,7 +8,7 @@ import java.awt.*;
 public class Text extends BaseShape {
     public String text;
 
-    public Text(int x, int y, String text) {
+    public Text(double x, double y, String text) {
         super(x, y);
 
         this.text = text;
@@ -37,10 +37,10 @@ public class Text extends BaseShape {
         int h = g.getClipBounds().height;
         int w = g.getClipBounds().width;
 
-        int mappedX = CanvasMapper.mapXpToXj(x, w);
-        int mappedY = CanvasMapper.mapYpToYj(y, h);
+        double mappedX = CanvasMapper.mapXpToXj(x, w);
+        double mappedY = CanvasMapper.mapYpToYj(y, h);
 
         g.setColor(color);
-        g.drawString(text, mappedX, mappedY);
+        g.drawString(text, (int) mappedX, (int) mappedY);
     }
 }

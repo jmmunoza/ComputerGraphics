@@ -1,15 +1,15 @@
 package components.canvas.listeners;
 
 public interface CanvasMouseListener {
-    void onMouseDragged(int x, int y);
+    void onMouseDragged(double x, double y);
 
-    void onMouseMoved(int x, int y);
+    void onMouseMoved(double x, double y);
 
-    void onMousePressed(int x, int y);
+    void onMousePressed(double x, double y);
 
-    void onMouseReleased(int x, int y);
+    void onMouseReleased(double x, double y);
 
-    void onMouseEntered(int x, int y);
+    void onMouseEntered(double x, double y);
 
-    void onMousedExited(int x, int y);
+    void onMousedExited(double x, double y);
 }

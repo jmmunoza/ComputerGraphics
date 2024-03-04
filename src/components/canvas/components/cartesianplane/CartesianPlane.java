@@ -24,7 +24,7 @@ public class CartesianPlane extends ShapeComposite implements CanvasResizeListen
     }
 
     @Override
-    public void onResize(int width, int height) {
+    public void onResize(double width, double height) {
         int padding = 30;
 
         xLine.setX1((-width / 2) + padding);

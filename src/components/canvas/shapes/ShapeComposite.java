@@ -10,11 +10,11 @@ import java.util.List;
 public class ShapeComposite extends BaseShape {
     private final List<Shape> children = new ArrayList<>();
 
-    public ShapeComposite(int x, int y, Color color) {
+    public ShapeComposite(double x, double y, Color color) {
         super(x, y, color);
     }
 
-    public ShapeComposite(int x, int y) {
+    public ShapeComposite(double x, double y) {
         super(x, y);
     }
 
@@ -53,22 +53,52 @@ public class ShapeComposite extends BaseShape {
     }
 
     @Override
-    public int getWidth() {
-        return 0;
-    }
-
-    @Override
-    public int getHeight() {
-        return 0;
-    }
-
-    @Override
-    public int getX() {
-        if (children.isEmpty()) return 0;
-
-        int x = children.getFirst().getX();
+    public double getWidth() {
+        double xMax = children.getFirst().getWidth() + children.getFirst().getX();
 
         for (Shape child : children) {
+            if (child.isTransparent()) continue;
+
+            double x = child.getWidth() + child.getX();
+
+            if (xMax < x) {
+                xMax = x;
+            }
+        }
+
+        double xMin = getX();
+
+        return Math.abs(Math.max(xMin, xMax) - Math.min(xMin, xMax));
+    }
+
+    @Override
+    public double getHeight() {
+        double yMin = children.getFirst().getY() - children.getFirst().getHeight();
+
+        for (Shape child : children) {
+            if (child.isTransparent()) continue;
+
+            double y = (child.getY() - child.getHeight());
+
+            if (yMin > y) {
+                yMin = y;
+            }
+        }
+
+        double yMax = getY();
+
+        return Math.abs(Math.max(yMax, yMin) - Math.min(yMax, yMin));
+    }
+
+    @Override
+    public double getX() {
+        if (children.isEmpty()) return 0;
+
+        double x = children.getFirst().getX();
+
+        for (Shape child : children) {
+            if (child.isTransparent()) continue;
+
             if (child.getX() < x) {
                 x = child.getX();
             }
@@ -78,12 +108,14 @@ public class ShapeComposite extends BaseShape {
     }
 
     @Override
-    public int getY() {
+    public double getY() {
         if (children.isEmpty()) return 0;
 
-        int y = children.getFirst().getY();
+        double y = children.getFirst().getY();
 
         for (Shape child : children) {
+            if (child.isTransparent()) continue;
+
             if (child.getY() > y) {
                 y = child.getY();
             }
@@ -111,5 +143,15 @@ public class ShapeComposite extends BaseShape {
         for (Shape child : children) {
             child.setColor(color);
         }
+    }
+
+    @Override
+    public double getXCenter() {
+        return getX() + getWidth() / 2;
+    }
+
+    @Override
+    public double getYCenter() {
+        return getY() - getHeight() / 2;
     }
 }

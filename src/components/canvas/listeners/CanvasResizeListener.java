@@ -1,5 +1,5 @@
 package components.canvas.listeners;
 
 public interface CanvasResizeListener {
-    void onResize(int width, int height);
+    void onResize(double width, double height);
 }

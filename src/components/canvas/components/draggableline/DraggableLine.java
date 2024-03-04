@@ -20,18 +20,18 @@ public class DraggableLine extends ShapeComposite implements CanvasMouseListener
     }
 
     @Override
-    public void onMouseDragged(int x, int y) {
+    public void onMouseDragged(double x, double y) {
         line.setX2(x);
         line.setY2(y);
     }
 
     @Override
-    public void onMouseMoved(int x, int y) {
+    public void onMouseMoved(double x, double y) {
 
     }
 
     @Override
-    public void onMousePressed(int x, int y) {
+    public void onMousePressed(double x, double y) {
         line.setX2(x);
         line.setY2(y);
         line.setX1(x);
@@ -39,18 +39,18 @@ public class DraggableLine extends ShapeComposite implements CanvasMouseListener
     }
 
     @Override
-    public void onMouseReleased(int x, int y) {
+    public void onMouseReleased(double x, double y) {
         line.setX2(x);
         line.setY2(y);
     }
 
     @Override
-    public void onMouseEntered(int x, int y) {
+    public void onMouseEntered(double x, double y) {
 
     }
 
     @Override
-    public void onMousedExited(int x, int y) {
+    public void onMousedExited(double x, double y) {
 
     }
 }

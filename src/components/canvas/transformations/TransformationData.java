@@ -1,10 +1,10 @@
 package components.canvas.transformations;
 
 public class TransformationData {
-    public int x;
-    public int y;
+    public double x;
+    public double y;
 
-    public TransformationData(int x, int y) {
+    public TransformationData(double x, double y) {
         this.x = x;
         this.y = y;
     }

@@ -6,19 +6,19 @@ import components.canvas.transformations.TransformationData;
 import java.awt.*;
 
 public class BaseShape implements Shape {
-    public int x;
-    public int y;
+    public double x;
+    public double y;
     public boolean hidden;
     public Color color;
 
-    public BaseShape(int x, int y, Color color) {
+    public BaseShape(double x, double y, Color color) {
         this.x = x;
         this.y = y;
         this.hidden = false;
         this.color = color;
     }
 
-    public BaseShape(int x, int y) {
+    public BaseShape(double x, double y) {
         this(x, y, Color.WHITE);
     }
 
@@ -38,32 +38,32 @@ public class BaseShape implements Shape {
     }
 
     @Override
-    public int getWidth() {
+    public double getWidth() {
         return 0;
     }
 
     @Override
-    public int getHeight() {
+    public double getHeight() {
         return 0;
     }
 
     @Override
-    public int getX() {
+    public double getX() {
         return x;
     }
 
     @Override
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
     @Override
-    public int getY() {
+    public double getY() {
         return y;
     }
 
     @Override
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
@@ -80,5 +80,20 @@ public class BaseShape implements Shape {
     @Override
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    @Override
+    public double getXCenter() {
+        return x;
+    }
+
+    @Override
+    public double getYCenter() {
+        return y;
+    }
+
+    @Override
+    public boolean isTransparent() {
+        return false;
     }
 }

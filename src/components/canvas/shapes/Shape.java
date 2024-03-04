@@ -9,21 +9,27 @@ public interface Shape {
 
     void transform(Transformation t);
 
-    int getWidth();
+    double getWidth();
 
-    int getHeight();
+    double getHeight();
 
-    int getX();
+    double getX();
 
-    void setX(int x);
+    void setX(double x);
 
-    int getY();
+    double getY();
 
-    void setY(int y);
+    void setY(double y);
 
     void show();
 
     void hide();
 
     void setColor(Color color);
+
+    double getXCenter();
+
+    double getYCenter();
+
+    boolean isTransparent();
 }

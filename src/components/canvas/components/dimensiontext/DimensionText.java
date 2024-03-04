@@ -17,8 +17,8 @@ public class DimensionText extends ShapeComposite implements CanvasResizeListene
     }
 
     @Override
-    public void onResize(int width, int height) {
-        String dimensionText = "w=" + width + " h=" + height;
+    public void onResize(double width, double height) {
+        String dimensionText = "w=" + (int) width + " h=" + (int) height;
 
         int padding = 10;
 

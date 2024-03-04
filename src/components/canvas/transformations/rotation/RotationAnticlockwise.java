@@ -6,25 +6,25 @@ import components.canvas.transformations.TransformationData;
 import math.matrix.Matrix3x3;
 import math.vector.Vector3D;
 
-public class RotationClockwise implements Transformation {
+public class RotationAnticlockwise implements Transformation {
     private final double radians;
     private final double x;
     private final double y;
 
-    public RotationClockwise(double x, double y, double degrees) {
+    public RotationAnticlockwise(double x, double y, double degrees) {
         this.radians = Math.toRadians(degrees);
         this.x = x;
         this.y = y;
     }
 
-    public RotationClockwise(double degrees) {
+    public RotationAnticlockwise(double degrees) {
         this(0, 0, degrees);
     }
 
     @Override
     public TransformationData transform(TransformationData data) {
         Matrix3x3 T = TransformationMatrixFactory.translation(x, y);
-        Matrix3x3 R = TransformationMatrixFactory.rotationClockwise(radians);
+        Matrix3x3 R = TransformationMatrixFactory.rotationAnticlockwise(radians);
         Matrix3x3 Tn = TransformationMatrixFactory.translation(-x, -y);
 
         Vector3D v = new Vector3D(new double[]{data.x, data.y, 1});

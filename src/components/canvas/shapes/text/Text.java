@@ -22,7 +22,7 @@ public class Text extends BaseShape {
         this(0, 0, "");
     }
 
-    public Text(int x, int y) {
+    public Text(double x, double y) {
         this(x, y, "");
     }
 

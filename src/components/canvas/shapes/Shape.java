@@ -13,6 +13,8 @@ public interface Shape {
 
     double getHeight();
 
+    double getDepth();
+
     double getX();
 
     void setX(double x);
@@ -20,6 +22,10 @@ public interface Shape {
     double getY();
 
     void setY(double y);
+
+    double getZ();
+
+    void setZ(double z);
 
     void show();
 
@@ -30,6 +36,8 @@ public interface Shape {
     double getXCenter();
 
     double getYCenter();
+
+    double getZCenter();
 
     boolean isTransparent();
 }

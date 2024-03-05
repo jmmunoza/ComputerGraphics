@@ -1,9 +1,7 @@
 package components.canvas.components.car;
 
 import components.canvas.components.coordsdrawer.CoordsDrawer;
-import components.canvas.listeners.CanvasKeyArrowListener;
 import components.canvas.listeners.CanvasKeyListener;
-import components.canvas.observers.CanvasKeyArrowObserver;
 import components.canvas.observers.CanvasKeyObserver;
 import components.canvas.shapes.ShapeComposite;
 import components.canvas.transformations.rotation.RotationAnticlockwise;
@@ -15,41 +13,28 @@ import components.canvas.transformations.translation.Translation;
 import java.awt.event.KeyEvent;
 import java.io.FileNotFoundException;
 
-public class Car extends ShapeComposite implements CanvasKeyArrowListener, CanvasKeyListener {
+public class Car extends ShapeComposite implements CanvasKeyListener {
+    private static final double ROTATION_DEGREES = 20;
+    private static final double SCALING_FACTOR = 1.15;
+    private static final double TRANSLATION_FACTOR = 50;
+
     public Car(String carPath) throws FileNotFoundException {
         add(new CoordsDrawer(carPath));
 
-        CanvasKeyArrowObserver.attachListener(this);
         CanvasKeyObserver.attachListener(this);
-    }
-
-    @Override
-    public void onUpPressed() {
-        transform(new Translation(0, 25));
-    }
-
-    @Override
-    public void onDownPressed() {
-        transform(new Translation(0, -25));
-    }
-
-    @Override
-    public void onRightPressed() {
-        transform(new Translation(25, 0));
-    }
-
-    @Override
-    public void onLeftPressed() {
-        transform(new Translation(-25, 0));
     }
 
     @Override
     public void onKeyPressed(int code) {
         switch (code) {
-            case KeyEvent.VK_ADD -> transform(new ScalingZoom(getXCenter(), getYCenter(), 1.05, 1.05));
-            case KeyEvent.VK_SUBTRACT -> transform(new ScalingZoomOut(getXCenter(), getYCenter(), 1.05, 1.05));
-            case KeyEvent.VK_A -> transform(new RotationAnticlockwise(getXCenter(), getYCenter(), 15));
-            case KeyEvent.VK_D -> transform(new RotationClockwise(getXCenter(), getYCenter(), 15));
+            case KeyEvent.VK_ADD -> transform(new ScalingZoom(getXCenter(), getYCenter(), SCALING_FACTOR));
+            case KeyEvent.VK_SUBTRACT -> transform(new ScalingZoomOut(getXCenter(), getYCenter(), SCALING_FACTOR));
+            case KeyEvent.VK_A -> transform(new Translation(-TRANSLATION_FACTOR, 0));
+            case KeyEvent.VK_W -> transform(new Translation(0, TRANSLATION_FACTOR));
+            case KeyEvent.VK_S -> transform(new Translation(0, -TRANSLATION_FACTOR));
+            case KeyEvent.VK_D -> transform(new Translation(TRANSLATION_FACTOR, 0));
+            case KeyEvent.VK_Q -> transform(new RotationClockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
+            case KeyEvent.VK_E -> transform(new RotationAnticlockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
         }
     }
 }

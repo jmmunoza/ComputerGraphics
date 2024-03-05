@@ -49,7 +49,6 @@ public class Circle extends BaseShape {
     @Override
     public double getYCenter() {
         return y - radius / 2;
-
     }
 
     @Override

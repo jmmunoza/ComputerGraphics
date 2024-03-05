@@ -29,7 +29,7 @@ public class BaseShape implements Shape {
 
     @Override
     public void transform(Transformation t) {
-        TransformationData dataToTransform = new TransformationData(x, y);
+        TransformationData dataToTransform = TransformationData.create2D(x, y);
 
         TransformationData result = t.transform(dataToTransform);
 
@@ -44,6 +44,11 @@ public class BaseShape implements Shape {
 
     @Override
     public double getHeight() {
+        return 0;
+    }
+
+    @Override
+    public double getDepth() {
         return 0;
     }
 
@@ -65,6 +70,16 @@ public class BaseShape implements Shape {
     @Override
     public void setY(double y) {
         this.y = y;
+    }
+
+    @Override
+    public double getZ() {
+        return 0;
+    }
+
+    @Override
+    public void setZ(double z) {
+
     }
 
     @Override
@@ -90,6 +105,11 @@ public class BaseShape implements Shape {
     @Override
     public double getYCenter() {
         return y;
+    }
+
+    @Override
+    public double getZCenter() {
+        return 0;
     }
 
     @Override

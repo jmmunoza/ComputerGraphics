@@ -9,11 +9,11 @@ import math.point.Point2D;
 import java.awt.*;
 
 public class Line extends BaseShape {
-    private final ILineAlgorithm algorithm;
-    private double x1;
-    private double y1;
-    private double x2;
-    private double y2;
+    protected final ILineAlgorithm algorithm;
+    protected double x1;
+    protected double y1;
+    protected double x2;
+    protected double y2;
 
     public Line(double x1, double y1, double x2, double y2) {
         super(x1, y1);
@@ -53,8 +53,8 @@ public class Line extends BaseShape {
 
     @Override
     public void transform(Transformation t) {
-        TransformationData t1 = t.transform(new TransformationData(x1, y1));
-        TransformationData t2 = t.transform(new TransformationData(x2, y2));
+        TransformationData t1 = t.transform(TransformationData.create2D(x1, y1));
+        TransformationData t2 = t.transform(TransformationData.create2D(x2, y2));
 
         x1 = t1.x;
         y1 = t1.y;

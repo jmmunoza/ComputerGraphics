@@ -2,6 +2,8 @@ package math.matrix;
 
 import math.point.Point;
 import math.point.Point4D;
+import math.vector.Vector;
+import math.vector.Vector4D;
 
 public class Matrix4x4 extends SquareMatrix {
     private static final int MATRIX_SIZE = 4;
@@ -26,6 +28,12 @@ public class Matrix4x4 extends SquareMatrix {
         Point point = SquareMatrix.times(A, p);
 
         return new Point4D(point.coords);
+    }
+
+    public static Vector4D times(Matrix4x4 A, Vector4D v) {
+        Vector vector = SquareMatrix.times(A, v);
+
+        return new Vector4D(vector.components);
     }
 
     public static Matrix4x4 add(Matrix4x4 A, Matrix4x4 B) {

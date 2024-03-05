@@ -14,6 +14,10 @@ public class Vector3D extends Vector {
         this.z = components[2];
     }
 
+    public Vector3D(double x, double y, double z) {
+        this(new double[]{x, y, z});
+    }
+
     public static Vector3D crossProduct(Vector3D v1, Vector3D v2) {
         double ux = v1.y * v2.z - v1.z * v2.y;
         double uy = v1.x * v2.z - v1.z * v2.x;

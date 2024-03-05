@@ -91,6 +91,25 @@ public class ShapeComposite extends BaseShape {
     }
 
     @Override
+    public double getDepth() {
+        double zMin = children.getFirst().getZ() - children.getFirst().getDepth();
+
+        for (Shape child : children) {
+            if (child.isTransparent()) continue;
+
+            double z = (child.getZ() - child.getDepth());
+
+            if (zMin > z) {
+                zMin = z;
+            }
+        }
+
+        double zMax = getZ();
+
+        return Math.abs(Math.max(zMax, zMin) - Math.min(zMax, zMin));
+    }
+
+    @Override
     public double getX() {
         if (children.isEmpty()) return 0;
 
@@ -125,6 +144,23 @@ public class ShapeComposite extends BaseShape {
     }
 
     @Override
+    public double getZ() {
+        if (children.isEmpty()) return 0;
+
+        double z = children.getFirst().getZ();
+
+        for (Shape child : children) {
+            if (child.isTransparent()) continue;
+
+            if (child.getZ() > z) {
+                z = child.getZ();
+            }
+        }
+
+        return z;
+    }
+
+    @Override
     public void show() {
         for (Shape child : children) {
             child.show();
@@ -153,5 +189,10 @@ public class ShapeComposite extends BaseShape {
     @Override
     public double getYCenter() {
         return getY() - getHeight() / 2;
+    }
+
+    @Override
+    public double getZCenter() {
+        return getZ() - getDepth() / 2;
     }
 }

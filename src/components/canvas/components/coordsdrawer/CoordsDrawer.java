@@ -1,8 +1,9 @@
 package components.canvas.components.coordsdrawer;
 
+import components.canvas.factories.LineFactory;
 import components.canvas.shapes.ShapeComposite;
 import components.canvas.shapes.line.Line;
-import math.point.Point2D;
+import math.point.Point;
 import util.file.FileReader;
 
 import java.awt.*;
@@ -25,17 +26,17 @@ public class CoordsDrawer extends ShapeComposite {
     private static List<Line> generateLinesFromSequenceCoords(SequenceCoords sequenceCoords) {
         List<Line> lines = new ArrayList<>();
 
-        Point2D[] points = sequenceCoords.getCoords();
+        Point[] points = sequenceCoords.getCoords();
         int[][] sequence = sequenceCoords.getSequence();
 
         for (int[] step : sequence) {
             int from = step[0];
             int to = step[1];
 
-            Point2D fromPoint = points[from];
-            Point2D toPoint = points[to];
+            Point fromPoint = points[from];
+            Point toPoint = points[to];
 
-            Line line = new Line(fromPoint, toPoint);
+            Line line = LineFactory.generate(fromPoint, toPoint);
 
             lines.add(line);
         }

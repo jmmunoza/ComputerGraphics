@@ -1,6 +1,7 @@
 package components.canvas.components.coordsdrawer;
 
-import math.point.Point2D;
+import components.canvas.factories.PointFactory;
+import math.point.Point;
 import util.exceptions.InvalidNumericArrayException;
 import util.exceptions.LinesMustBeNumericException;
 import util.numeric.IntegerArrayCaster;
@@ -12,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SequenceCoords {
-    private final Point2D[] coords;
+    private final Point[] coords;
     private final int[][] sequence;
 
-    private SequenceCoords(Point2D[] coords, int[][] sequence) {
+    private SequenceCoords(Point[] coords, int[][] sequence) {
         this.coords = coords;
         this.sequence = sequence;
     }
@@ -32,7 +33,7 @@ public class SequenceCoords {
         }
 
         int[][] coordsArray = numericArray.get(0);
-        Point2D[] pointCoords = convertNumericArrayToPointArray(coordsArray);
+        Point[] pointCoords = convertNumericArrayToPointArray(coordsArray);
 
         int[][] sequenceArray = numericArray.get(1);
 
@@ -108,25 +109,25 @@ public class SequenceCoords {
     }
 
     public static boolean isNumericLineValid(int[] numericLine) {
-        return numericLine.length >= 1 && numericLine.length <= 2;
+        return numericLine.length >= 1 && numericLine.length <= 3;
     }
 
     public static boolean isNumericLineACoord(int[] numericLine) {
-        return numericLine.length == 2;
+        return numericLine.length == 2 || numericLine.length == 3;
     }
 
     public static boolean hasNumericArrayCoordsAndSequence(List<int[][]> parsedNumericArray) {
-        return parsedNumericArray.size() == 2;
+        return parsedNumericArray.size() == 2 || parsedNumericArray.size() == 3;
     }
 
-    public static Point2D[] convertNumericArrayToPointArray(int[][] numericArray) {
-        Point2D[] pointsArray = new Point2D[numericArray.length];
+    public static Point[] convertNumericArrayToPointArray(int[][] numericArray) {
+        Point[] pointsArray = new Point[numericArray.length];
 
         for (int i = 0; i < numericArray.length; i++) {
             int[] coords = numericArray[i];
             double[] coordsDouble = IntegerArrayCaster.castToDoubleArray(coords);
 
-            Point2D point = new Point2D(coordsDouble);
+            Point point = PointFactory.create(coordsDouble);
 
             pointsArray[i] = point;
         }
@@ -138,7 +139,7 @@ public class SequenceCoords {
         return sequence;
     }
 
-    public Point2D[] getCoords() {
+    public Point[] getCoords() {
         return coords;
     }
 }

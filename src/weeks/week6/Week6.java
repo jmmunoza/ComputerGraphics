@@ -1,4 +1,4 @@
-package weeks.week4;
+package weeks.week6;
 
 import components.canvas.Canvas;
 import components.canvas.components.car.Car;
@@ -10,7 +10,7 @@ import components.frame.Frame;
 
 import java.io.FileNotFoundException;
 
-public class Week4 {
+public class Week6 {
     public static void main(String[] args) throws FileNotFoundException {
         ShapeComposite composite = new ShapeComposite();
         composite.add(
@@ -21,11 +21,11 @@ public class Week4 {
 
         Canvas canvas = new Canvas(composite);
 
-        Frame frame = new Frame("Week 4 - Transformations", canvas);
+        Frame frame = new Frame("Week 6 - Transformations", canvas);
         frame.show();
     }
 
     public static String getCarPath() {
-        return "src/weeks/week4/files/car.txt";
+        return "src/weeks/week6/files/car.txt";
     }
 }

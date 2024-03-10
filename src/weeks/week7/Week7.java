@@ -1,4 +1,4 @@
-package weeks.week5;
+package weeks.week7;
 
 import components.canvas.Canvas;
 import components.canvas.components.cartesianplane.CartesianPlane;
@@ -10,7 +10,7 @@ import components.frame.Frame;
 
 import java.io.FileNotFoundException;
 
-public class Week5 {
+public class Week7 {
     public static void main(String[] args) throws FileNotFoundException {
         ShapeComposite composite = new ShapeComposite();
         composite.add(
@@ -21,11 +21,11 @@ public class Week5 {
 
         Canvas canvas = new Canvas(composite);
 
-        Frame frame = new Frame("Week 5 - 3D Transformations", canvas);
+        Frame frame = new Frame("Week 7 - 3D Transformations", canvas);
         frame.show();
     }
 
     public static String getHouse3DPath() {
-        return "src/weeks/week5/files/house3d.txt";
+        return "src/weeks/week7/files/house3d.txt";
     }
 }

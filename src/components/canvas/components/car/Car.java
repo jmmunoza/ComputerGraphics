@@ -33,8 +33,8 @@ public class Car extends ShapeComposite implements CanvasKeyListener {
             case KeyEvent.VK_W -> transform(new Translation(0, TRANSLATION_FACTOR));
             case KeyEvent.VK_S -> transform(new Translation(0, -TRANSLATION_FACTOR));
             case KeyEvent.VK_D -> transform(new Translation(TRANSLATION_FACTOR, 0));
-            case KeyEvent.VK_Q -> transform(new RotationClockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
-            case KeyEvent.VK_E -> transform(new RotationAnticlockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
+            case KeyEvent.VK_Q -> transform(new RotationAnticlockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
+            case KeyEvent.VK_E -> transform(new RotationClockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
         }
     }
 }

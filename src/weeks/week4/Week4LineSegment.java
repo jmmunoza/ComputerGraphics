@@ -1,4 +1,4 @@
-package weeks.week3;
+package weeks.week4;
 
 import components.canvas.Canvas;
 import components.canvas.components.cartesianplane.CartesianPlane;
@@ -9,12 +9,12 @@ import components.canvas.shapes.ShapeComposite;
 import components.frame.Frame;
 import math.parametricequation.LineSegment;
 
-public class Week3LineSegment {
+public class Week4LineSegment {
     public static void main(String[] args) {
         ShapeComposite composite = generateCanvasComponents();
         Canvas canvas = new Canvas(composite);
 
-        Frame frame = new Frame("Week 3 - Line segment", canvas);
+        Frame frame = new Frame("Week 4 - Line segment", canvas);
         frame.show();
     }
 

@@ -4,44 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Transformations improved">
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/house3d/House3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/factories/LineFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/factories/PointFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/matrixes/ProjectionMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/matrixes/Translation3DMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/matrixes/TranslationMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/projection/Projection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/Rotation3DXClockwise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/Rotation3DYClockwise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/Rotation3DZClockwise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/scaling/Scaling3DZoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/scaling/Scaling3DZoomOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/translation/Translation3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/vector/Vector4D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/week5/Week5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/week5/files/house3d.txt" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="3D TRANSFORMATIONS ADDED">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/components/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/car/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/coordsdrawer/CoordsDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/coordsdrawer/CoordsDrawer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/coordsdrawer/SequenceCoords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/coordsdrawer/SequenceCoords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/factories/TransformationMatrixFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/factories/TransformationMatrixFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/BaseShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/BaseShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/ShapeComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/ShapeComposite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/TransformationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/TransformationData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/RotationAnticlockwise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/RotationAnticlockwise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/RotationClockwise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/rotation/RotationClockwise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/scaling/ScalingZoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/scaling/ScalingZoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/scaling/ScalingZoomOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/scaling/ScalingZoomOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/translation/Translation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/translation/Translation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/matrix/Matrix4x4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/matrix/Matrix4x4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/vector/Vector3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vector/Vector3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week3/Week3DrawHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week4/Week4DrawHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week3/Week3LineSegment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week4/Week4LineSegment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week3/files/clothespin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week4/files/clothespin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week3/files/house.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week4/files/house.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week4/Week4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week6/Week6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week4/files/car.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week6/files/car.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week5/Week5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week7/Week7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/week5/files/house3d.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week7/files/house3d.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +52,8 @@
     "Application.Week3LineSegment.executor": "Run",
     "Application.Week4.executor": "Run",
     "Application.Week5.executor": "Run",
+    "Application.Week6.executor": "Run",
+    "Application.Week7.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -113,7 +88,7 @@
       <recent name="components.canvas.transformations.scaling" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Week5">
+  <component name="RunManager" selected="Application.Week7">
     <configuration name="Week2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="weeks.week2.Week2" />
       <module name="ComputerGraphics" />
@@ -127,8 +102,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Week3DrawHouse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weeks.week3.Week3DrawHouse" />
+    <configuration name="Week4DrawHouse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weeks.week4.Week4DrawHouse" />
       <module name="ComputerGraphics" />
       <extension name="coverage">
         <pattern>
@@ -140,21 +115,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Week3LineSegment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weeks.week3.Week3LineSegment" />
-      <module name="ComputerGraphics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="weeks.week3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Week4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weeks.week4.Week4" />
+    <configuration name="Week4LineSegment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weeks.week4.Week4LineSegment" />
       <module name="ComputerGraphics" />
       <extension name="coverage">
         <pattern>
@@ -166,12 +128,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Week5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weeks.week5.Week5" />
+    <configuration name="Week6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weeks.week6.Week6" />
       <module name="ComputerGraphics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weeks.week5.*" />
+          <option name="PATTERN" value="weeks.week6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Week7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weeks.week7.Week7" />
+      <module name="ComputerGraphics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="weeks.week7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Week5" />
+        <item itemvalue="Application.Week7" />
+        <item itemvalue="Application.Week6" />
         <item itemvalue="Application.Week2" />
-        <item itemvalue="Application.Week4" />
-        <item itemvalue="Application.Week3LineSegment" />
-        <item itemvalue="Application.Week3DrawHouse" />
+        <item itemvalue="Application.Week4LineSegment" />
+        <item itemvalue="Application.Week4DrawHouse" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +207,8 @@
       <workItem from="1709509348130" duration="10253000" />
       <workItem from="1709581501546" duration="8519000" />
       <workItem from="1709601094329" duration="6716000" />
-      <workItem from="1709665594775" duration="6569000" />
+      <workItem from="1709665594775" duration="6995000" />
+      <workItem from="1710111907756" duration="790000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -330,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709586088318</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="3D TRANSFORMATIONS ADDED">
+      <option name="closed" value="true" />
+      <created>1709672680897</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709672680897</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +331,8 @@
     <MESSAGE value="Solving segment lines!!!!!!!!!" />
     <MESSAGE value="Transformations added" />
     <MESSAGE value="Transformations improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transformations improved" />
+    <MESSAGE value="3D TRANSFORMATIONS ADDED" />
+    <option name="LAST_COMMIT_MESSAGE" value="3D TRANSFORMATIONS ADDED" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -357,14 +342,14 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/weeks/week4/Week4.java</url>
+          <url>file://$PROJECT_DIR$/src/weeks/week6/Week6.java</url>
           <line>12</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/weeks/week5/Week5.java</url>
+          <url>file://$PROJECT_DIR$/src/weeks/week7/Week7.java</url>
           <line>13</line>
-          <properties class="weeks.week5.Week5" method="main">
+          <properties class="weeks.week7.Week7" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

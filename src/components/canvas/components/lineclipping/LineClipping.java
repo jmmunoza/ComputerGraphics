@@ -6,6 +6,10 @@ import components.canvas.observers.CanvasMouseObserver;
 import components.canvas.observers.CanvasResizeObserver;
 import components.canvas.shapes.ShapeComposite;
 import components.canvas.shapes.line.Line;
+import components.canvas.shapes.line.clipping.ILineClippingAlgorithm;
+import components.canvas.shapes.line.clipping.LineClippingAlgorithm;
+import components.canvas.shapes.line.clipping.LineClippingProvider;
+import components.canvas.shapes.line.clipping.LineClippingResult;
 import components.canvas.shapes.rectangle.Rectangle;
 import components.canvas.shapes.text.Text;
 
@@ -52,9 +56,14 @@ public class LineClipping extends ShapeComposite implements CanvasMouseListener,
         line.setX2(x2);
         line.setY2(y2);
 
-        boolean draw = algorithm.clip(clippedLine, (int) x1, (int) y1, (int) x2, (int) y2, (int) xMin, (int) yMin, (int) xMax, (int) yMax);
+        LineClippingResult result = algorithm.clip((int) x1, (int) y1, (int) x2, (int) y2, (int) xMin, (int) yMin, (int) xMax, (int) yMax);
 
-        if (draw) {
+        clippedLine.setX1(result.x1);
+        clippedLine.setY1(result.y1);
+        clippedLine.setX2(result.x2);
+        clippedLine.setY2(result.y2);
+
+        if (result.draw) {
             clippedLine.show();
         } else {
             clippedLine.hide();

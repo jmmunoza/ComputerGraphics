@@ -1,7 +1,7 @@
-package components.canvas.components.lineclipping;
+package components.canvas.shapes.line.clipping;
 
-import components.canvas.components.lineclipping.algorithms.CohenSutherland;
-import components.canvas.components.lineclipping.algorithms.LiangBarsky;
+import components.canvas.shapes.line.clipping.algorithms.CohenSutherland;
+import components.canvas.shapes.line.clipping.algorithms.LiangBarsky;
 
 public class LineClippingProvider {
     public static ILineClippingAlgorithm inject(LineClippingAlgorithm algorithm) {

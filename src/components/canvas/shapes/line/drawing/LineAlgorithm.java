@@ -1,4 +1,4 @@
-package components.canvas.shapes.line;
+package components.canvas.shapes.line.drawing;
 
 public enum LineAlgorithm {
     BRESENHAM("Bresenham");

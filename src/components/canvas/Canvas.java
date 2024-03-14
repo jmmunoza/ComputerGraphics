@@ -1,5 +1,7 @@
 package components.canvas;
 
+import components.canvas.cameras.Camera;
+import components.canvas.cameras.StaticCamera;
 import components.canvas.observers.CanvasKeyArrowObserver;
 import components.canvas.observers.CanvasKeyObserver;
 import components.canvas.observers.CanvasMouseObserver;
@@ -15,12 +17,17 @@ public class Canvas extends JPanel implements MouseMotionListener, ComponentList
 
     public Canvas(ShapeComposite components) {
         this.components = components;
+        this.setCamera(new StaticCamera());
         this.setBackground(Color.BLACK);
         this.setFocusable(true);
         this.addMouseMotionListener(this);
         this.addComponentListener(this);
         this.addMouseListener(this);
         this.addKeyListener(this);
+    }
+
+    public void setCamera(Camera camera) {
+        components.setCamera(camera);
     }
 
     @Override

@@ -1,7 +1,7 @@
-package components.canvas.components.lineclipping.algorithms;
+package components.canvas.shapes.line.clipping.algorithms;
 
-import components.canvas.components.lineclipping.ILineClippingAlgorithm;
-import components.canvas.shapes.line.Line;
+import components.canvas.shapes.line.clipping.ILineClippingAlgorithm;
+import components.canvas.shapes.line.clipping.LineClippingResult;
 
 public class LiangBarsky implements ILineClippingAlgorithm {
     float maxi(float[] arr, int n) {
@@ -22,7 +22,7 @@ public class LiangBarsky implements ILineClippingAlgorithm {
     }
 
     @Override
-    public boolean clip(Line line, int x1, int y1, int x2, int y2, int xMin, int yMin, int xMax, int yMax) {
+    public LineClippingResult clip(int x1, int y1, int x2, int y2, int xMin, int yMin, int xMax, int yMax) {
         // defining variables
         float p1 = -(x2 - x1);
         float p2 = -p1;
@@ -40,7 +40,7 @@ public class LiangBarsky implements ILineClippingAlgorithm {
         negArray[0] = 0;
 
         if ((p1 == 0 && q1 < 0) || (p2 == 0 && q2 < 0) || (p3 == 0 && q3 < 0) || (p4 == 0 && q4 < 0)) {
-            return false;
+            return LineClippingResult.onFailure();
         }
         if (p1 != 0) {
             float r1 = q1 / p1;
@@ -72,7 +72,7 @@ public class LiangBarsky implements ILineClippingAlgorithm {
         rn2 = mini(posArray, posInd); // minimum of positive array
 
         if (rn1 > rn2) { // reject
-            return false;
+            return LineClippingResult.onFailure();
         }
 
         xn1 = x1 + p2 * rn1;
@@ -81,12 +81,7 @@ public class LiangBarsky implements ILineClippingAlgorithm {
         xn2 = x1 + p2 * rn2;
         yn2 = y1 + p4 * rn2;
 
-        line.setX1((int) xn1);
-        line.setY1((int) yn1);
-        line.setX2((int) xn2);
-        line.setY2((int) yn2);
-
-        return true;
+        return LineClippingResult.onSuccess((int) xn1, (int) yn1, (int) xn2, (int) yn2);
     }
 
 

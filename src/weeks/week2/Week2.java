@@ -3,9 +3,9 @@ package weeks.week2;
 import components.canvas.Canvas;
 import components.canvas.components.dimensiontext.DimensionText;
 import components.canvas.components.lineclipping.LineClipping;
-import components.canvas.components.lineclipping.LineClippingAlgorithm;
 import components.canvas.components.positiontext.PositionText;
 import components.canvas.shapes.ShapeComposite;
+import components.canvas.shapes.line.clipping.LineClippingAlgorithm;
 import components.frame.Frame;
 
 public class Week2 {

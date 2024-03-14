@@ -1,5 +1,6 @@
 package components.canvas.shapes;
 
+import components.canvas.cameras.Camera;
 import components.canvas.transformations.Transformation;
 import components.canvas.transformations.TransformationData;
 
@@ -10,6 +11,7 @@ public class BaseShape implements Shape {
     public double y;
     public boolean hidden;
     public Color color;
+    public Camera camera;
 
     public BaseShape(double x, double y, Color color) {
         this.x = x;
@@ -115,5 +117,10 @@ public class BaseShape implements Shape {
     @Override
     public boolean isTransparent() {
         return false;
+    }
+
+    @Override
+    public void setCamera(Camera camera) {
+        this.camera = camera;
     }
 }

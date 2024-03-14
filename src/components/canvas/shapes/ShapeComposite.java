@@ -1,5 +1,6 @@
 package components.canvas.shapes;
 
+import components.canvas.cameras.Camera;
 import components.canvas.transformations.Transformation;
 
 import java.awt.*;
@@ -194,5 +195,12 @@ public class ShapeComposite extends BaseShape {
     @Override
     public double getZCenter() {
         return getZ() - getDepth() / 2;
+    }
+
+    @Override
+    public void setCamera(Camera camera) {
+        for (Shape child : children) {
+            child.setCamera(camera);
+        }
     }
 }

@@ -40,6 +40,16 @@ public class Vector {
         return new Vector(v1.dimension, addedComponents);
     }
 
+    public static Vector minus(Vector v) {
+        double[] negativeComponents = new double[v.dimension];
+
+        for (int i = 0; i < v.dimension; i++) {
+            negativeComponents[i] = -1 * v.components[i];
+        }
+
+        return new Vector(v.dimension, negativeComponents);
+    }
+
     public void normalize() {
         Vector normalized = normalize(this);
 

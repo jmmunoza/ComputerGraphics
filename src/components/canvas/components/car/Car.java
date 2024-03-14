@@ -7,6 +7,7 @@ import components.canvas.shapes.ShapeComposite;
 import components.canvas.transformations.rotation.RotationAnticlockwise;
 import components.canvas.transformations.rotation.RotationClockwise;
 import components.canvas.transformations.translation.Translation;
+import math.util.DegreesCalculator;
 
 import java.awt.event.KeyEvent;
 import java.io.FileNotFoundException;
@@ -49,19 +50,12 @@ public class Car extends ShapeComposite implements CanvasKeyListener {
     private void rotateRight() {
         transform(new RotationClockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
 
-        changeAngle(ROTATION_DEGREES);
+        angle = DegreesCalculator.changeAngle(angle, ROTATION_DEGREES);
     }
 
     private void rotateLeft() {
         transform(new RotationAnticlockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
 
-        changeAngle(-ROTATION_DEGREES);
-    }
-
-    private void changeAngle(double degrees) {
-        angle += degrees;
-
-        if (angle > 360) angle -= 360;
-        else if (angle < 0) angle += 360;
+        angle = DegreesCalculator.changeAngle(angle, -ROTATION_DEGREES);
     }
 }

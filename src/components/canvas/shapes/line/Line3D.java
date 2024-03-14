@@ -1,10 +1,11 @@
 package components.canvas.shapes.line;
 
 import components.canvas.CanvasMapper;
+import components.canvas.shapes.line.clipping.LineClippingResult;
 import components.canvas.transformations.Transformation;
 import components.canvas.transformations.TransformationData;
-import components.canvas.transformations.projection.Projection;
 import math.point.Point3D;
+import math.vector.Vector3D;
 
 import java.awt.*;
 
@@ -24,24 +25,35 @@ public class Line3D extends Line {
     }
 
     public Line3D(Point3D point1, Point3D point2) {
-        this(point1.x, point1.y, point1.z, point2.x, point2.y, point2.z);
+        this(point1.getX(), point1.getY(), point1.getZ(), point2.getX(), point2.getY(), point2.getZ());
     }
 
     @Override
     public void draw(Graphics g) {
         if (hidden) return;
 
+        Vector3D transformed1 = camera.transformCoords(x1, y1, z1);
+        Vector3D transformed2 = camera.transformCoords(x2, y2, z2);
+
         int h = g.getClipBounds().height;
         int w = g.getClipBounds().width;
 
-        Transformation transformation = new Projection(-500);
-        TransformationData projection1 = transformation.transform(TransformationData.create3D(x1, y1, z1));
-        TransformationData projection2 = transformation.transform(TransformationData.create3D(x2, y2, z2));
+        LineClippingResult result = clippingAlgorithm.clip(
+                (int) transformed1.x,
+                (int) transformed1.y,
+                (int) transformed2.x,
+                (int) transformed2.y,
+                -w / 2,
+                -h / 2,
+                w / 2,
+                h / 2
+        );
 
-        double mappedX1 = CanvasMapper.mapXpToXj(projection1.x, w);
-        double mappedY1 = CanvasMapper.mapYpToYj(projection1.y, h);
-        double mappedX2 = CanvasMapper.mapXpToXj(projection2.x, w);
-        double mappedY2 = CanvasMapper.mapYpToYj(projection2.y, h);
+        double mappedX1 = CanvasMapper.mapXpToXj(result.x1, w);
+        double mappedY1 = CanvasMapper.mapYpToYj(result.y1, h);
+        double mappedX2 = CanvasMapper.mapXpToXj(result.x2, w);
+        double mappedY2 = CanvasMapper.mapYpToYj(result.y2, h);
+
 
         g.setColor(color);
 

@@ -1,9 +1,7 @@
 package components.canvas.shapes.circle;
 
 import components.canvas.CanvasMapper;
-import components.canvas.transformations.Transformation;
-import components.canvas.transformations.TransformationData;
-import components.canvas.transformations.projection.Projection;
+import math.vector.Vector3D;
 
 import java.awt.*;
 
@@ -24,14 +22,13 @@ public class Circle3D extends Circle {
     public void draw(Graphics g) {
         if (hidden) return;
 
+        Vector3D transformed = camera.transformCoords(x, y, z);
+
         int h = g.getClipBounds().height;
         int w = g.getClipBounds().width;
 
-        Transformation transformation = new Projection(-500);
-        TransformationData projection = transformation.transform(TransformationData.create3D(x, y, z));
-
-        double mappedX = CanvasMapper.mapXpToXj(projection.x, w);
-        double mappedY = CanvasMapper.mapYpToYj(projection.y, h);
+        double mappedX = CanvasMapper.mapXpToXj(transformed.x, w);
+        double mappedY = CanvasMapper.mapYpToYj(transformed.y, h);
 
         g.setColor(color);
         g.drawOval((int) mappedX, (int) mappedY, (int) getRadius(), (int) getRadius());

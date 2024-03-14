@@ -1,7 +1,7 @@
-package components.canvas.components.lineclipping.algorithms;
+package components.canvas.shapes.line.clipping.algorithms;
 
-import components.canvas.components.lineclipping.ILineClippingAlgorithm;
-import components.canvas.shapes.line.Line;
+import components.canvas.shapes.line.clipping.ILineClippingAlgorithm;
+import components.canvas.shapes.line.clipping.LineClippingResult;
 
 public class CohenSutherland implements ILineClippingAlgorithm {
     private final int INSIDE = 0; // 0000
@@ -26,7 +26,7 @@ public class CohenSutherland implements ILineClippingAlgorithm {
     }
 
     @Override
-    public boolean clip(Line line, int x1, int y1, int x2, int y2, int xMin, int yMin, int xMax, int yMax) {
+    public LineClippingResult clip(int x1, int y1, int x2, int y2, int xMin, int yMin, int xMax, int yMax) {
         int outCode1 = computeOutCode(x1, y1, xMin, yMin, xMax, yMax);
         int outCode2 = computeOutCode(x2, y2, xMin, yMin, xMax, yMax);
         boolean accept = false;
@@ -74,11 +74,8 @@ public class CohenSutherland implements ILineClippingAlgorithm {
             }
         }
 
-        line.setX1(xn1);
-        line.setY1(yn1);
-        line.setX2(xn2);
-        line.setY2(yn2);
+        if (!accept) return LineClippingResult.onFailure();
 
-        return accept;
+        return LineClippingResult.onSuccess(xn1, yn1, xn2, yn2);
     }
 }

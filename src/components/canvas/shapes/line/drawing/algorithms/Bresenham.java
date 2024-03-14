@@ -1,6 +1,6 @@
-package components.canvas.shapes.line.algorithms;
+package components.canvas.shapes.line.drawing.algorithms;
 
-import components.canvas.shapes.line.ILineAlgorithm;
+import components.canvas.shapes.line.drawing.ILineAlgorithm;
 
 import java.awt.*;
 

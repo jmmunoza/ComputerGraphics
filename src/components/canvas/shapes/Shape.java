@@ -1,5 +1,6 @@
 package components.canvas.shapes;
 
+import components.canvas.cameras.Camera;
 import components.canvas.transformations.Transformation;
 
 import java.awt.*;
@@ -40,4 +41,6 @@ public interface Shape {
     double getZCenter();
 
     boolean isTransparent();
+
+    void setCamera(Camera camera);
 }

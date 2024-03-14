@@ -6,6 +6,7 @@ import components.canvas.observers.CanvasKeyObserver;
 import components.canvas.shapes.ShapeComposite;
 import components.canvas.transformations.rotation.Rotation3DYClockwise;
 import components.canvas.transformations.translation.Translation3D;
+import math.util.DegreesCalculator;
 
 import java.awt.event.KeyEvent;
 import java.io.FileNotFoundException;
@@ -48,18 +49,13 @@ public class House3D extends ShapeComposite implements CanvasKeyListener {
 
     private void rotateRight() {
         transform(new Rotation3DYClockwise(getXCenter(), getYCenter(), getZCenter(), ROTATION_DEGREES));
-        changeAngle(ROTATION_DEGREES);
+
+        angle = DegreesCalculator.changeAngle(angle, ROTATION_DEGREES);
     }
 
     private void rotateLeft() {
         transform(new Rotation3DYClockwise(getXCenter(), getYCenter(), getZCenter(), -ROTATION_DEGREES));
-        changeAngle(-ROTATION_DEGREES);
-    }
 
-    private void changeAngle(double degrees) {
-        angle += degrees;
-
-        if (angle > 360) angle -= 360;
-        else if (angle < 0) angle += 360;
+        angle = DegreesCalculator.changeAngle(angle, -ROTATION_DEGREES);
     }
 }

@@ -1,4 +1,4 @@
-package components.canvas.components.lineclipping;
+package components.canvas.shapes.line.clipping;
 
 public enum LineClippingAlgorithm {
     COHEN_SUTHERLAND("Cohen-Sutherland"),

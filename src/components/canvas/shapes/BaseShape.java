@@ -1,10 +1,13 @@
 package components.canvas.shapes;
 
 import components.canvas.cameras.Camera;
+import components.canvas.listeners.ShapePositionListener;
 import components.canvas.transformations.Transformation;
 import components.canvas.transformations.TransformationData;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaseShape implements Shape {
     public double x;
@@ -12,12 +15,14 @@ public class BaseShape implements Shape {
     public boolean hidden;
     public Color color;
     public Camera camera;
+    public List<ShapePositionListener> positionListeners;
 
     public BaseShape(double x, double y, Color color) {
         this.x = x;
         this.y = y;
         this.hidden = false;
         this.color = color;
+        this.positionListeners = new ArrayList<>();
     }
 
     public BaseShape(double x, double y) {
@@ -62,6 +67,8 @@ public class BaseShape implements Shape {
     @Override
     public void setX(double x) {
         this.x = x;
+
+        onMovement();
     }
 
     @Override
@@ -72,6 +79,8 @@ public class BaseShape implements Shape {
     @Override
     public void setY(double y) {
         this.y = y;
+
+        onMovement();
     }
 
     @Override
@@ -81,7 +90,7 @@ public class BaseShape implements Shape {
 
     @Override
     public void setZ(double z) {
-
+        onMovement();
     }
 
     @Override
@@ -122,5 +131,25 @@ public class BaseShape implements Shape {
     @Override
     public void setCamera(Camera camera) {
         this.camera = camera;
+    }
+
+    @Override
+    public void onMovement() {
+        for (ShapePositionListener listener : positionListeners) {
+            listener.onCenterPositionUpdate(getXCenter(), getYCenter(), getZCenter());
+            listener.onPositionUpdate(getX(), getY(), getZ());
+        }
+    }
+
+    @Override
+    public void addShapePositionListener(ShapePositionListener listener) {
+        if (!positionListeners.contains(listener)) {
+            positionListeners.add(listener);
+        }
+    }
+
+    @Override
+    public void removeShapePositionListener(ShapePositionListener listener) {
+        positionListeners.remove(listener);
     }
 }

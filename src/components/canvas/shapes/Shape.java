@@ -1,6 +1,7 @@
 package components.canvas.shapes;
 
 import components.canvas.cameras.Camera;
+import components.canvas.listeners.ShapePositionListener;
 import components.canvas.transformations.Transformation;
 
 import java.awt.*;
@@ -43,4 +44,10 @@ public interface Shape {
     boolean isTransparent();
 
     void setCamera(Camera camera);
+
+    void onMovement();
+
+    void addShapePositionListener(ShapePositionListener listener);
+
+    void removeShapePositionListener(ShapePositionListener listener);
 }

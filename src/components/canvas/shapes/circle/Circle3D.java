@@ -42,5 +42,7 @@ public class Circle3D extends Circle {
     @Override
     public void setZ(double z) {
         this.z = z;
+
+        onMovement();
     }
 }

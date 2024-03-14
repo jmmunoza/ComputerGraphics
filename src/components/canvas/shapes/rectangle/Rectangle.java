@@ -51,6 +51,8 @@ public class Rectangle extends ShapeComposite {
         lineRight.setX2(x + w);
         lineRight.setY1(y - h);
         lineRight.setY2(y);
+
+        onMovement();
     }
 
     @Override

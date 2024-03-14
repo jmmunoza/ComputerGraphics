@@ -4,48 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Challenges fixed">
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/cameras/Camera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/cameras/Camera3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/cameras/CircularCamera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/cameras/StaticCamera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/cartesianplane/CartesianPlane3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/coordstext/CoordsText3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/neighborhood/Neighborhood.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/clipping/LineClippingResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/transformations/matrixes/ViewMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/util/DegreesCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/week8/Week8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/week8/files/house3d.txt" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="3D CAMERAS!!!!!!">
+      <change afterPath="$PROJECT_DIR$/src/components/canvas/cameras/FollowingCamera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/coordstext/FollowingCoordsText3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/canvas/listeners/ShapePositionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/CanvasComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/car/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/house3d/House3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/house3d/House3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/ILineClippingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/clipping/ILineClippingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClipping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClippingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/clipping/LineClippingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/LineClippingProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/clipping/LineClippingProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/algorithms/CohenSutherland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/clipping/algorithms/CohenSutherland.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/lineclipping/algorithms/LiangBarsky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/clipping/algorithms/LiangBarsky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/cartesianplane/CartesianPlane3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/cartesianplane/CartesianPlane3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/neighborhood/Neighborhood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/neighborhood/Neighborhood.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/BaseShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/BaseShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/ShapeComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/ShapeComposite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/ILineAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/drawing/ILineAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/LineAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/drawing/LineAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/LineProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/drawing/LineProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/algorithms/Bresenham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/drawing/algorithms/Bresenham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/matrixes/ProjectionMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/transformations/matrixes/ProjectionMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/transformations/projection/Projection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/frame/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/frame/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/point/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/point/Point3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/vector/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vector/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/vector/Vector3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/vector/Vector3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weeks/week2/Week2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week2/Week2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weeks/week7/Week7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week7/Week7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,40 +47,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Week1.executor": "Run",
-    "Application.Week2.executor": "Run",
-    "Application.Week3.executor": "Run",
-    "Application.Week3DrawHouse.executor": "Run",
-    "Application.Week3LineSegment.executor": "Run",
-    "Application.Week4.executor": "Run",
-    "Application.Week4DrawHouse.executor": "Run",
-    "Application.Week4LineSegment.executor": "Run",
-    "Application.Week5.executor": "Run",
-    "Application.Week6.executor": "Run",
-    "Application.Week7.executor": "Run",
-    "Application.Week8.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Downloads/EjemploTransformaciones3D",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3DrawHouse.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3LineSegment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week4DrawHouse.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week4LineSegment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week8.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Downloads/EjemploTransformaciones3D&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\ComputerGraphics\src\weeks\week8" />
@@ -124,7 +97,7 @@
       <recent name="weeks.week5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Week8">
+  <component name="RunManager" selected="Application.Week7">
     <configuration name="Week1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="weeks.week1.Week1" />
       <module name="ComputerGraphics" />
@@ -192,9 +165,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Week7" />
         <item itemvalue="Application.Week8" />
         <item itemvalue="Application.Week2" />
-        <item itemvalue="Application.Week7" />
         <item itemvalue="Application.Week1" />
         <item itemvalue="Application.Week4LineSegment" />
       </list>
@@ -249,6 +222,7 @@
       <workItem from="1710269707309" duration="10891000" />
       <workItem from="1710359001396" duration="12658000" />
       <workItem from="1710446634204" duration="11215000" />
+      <workItem from="1710458309669" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -370,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710199917934</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="3D CAMERAS!!!!!!">
+      <option name="closed" value="true" />
+      <created>1710458346586</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710458346586</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +372,8 @@
     <MESSAGE value="3D TRANSFORMATIONS ADDED" />
     <MESSAGE value="Weeks number fixed" />
     <MESSAGE value="Challenges fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Challenges fixed" />
+    <MESSAGE value="3D CAMERAS!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="3D CAMERAS!!!!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -406,12 +389,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/weeks/week7/Week7.java</url>
-          <line>12</line>
+          <line>15</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/weeks/week7/Week7.java</url>
-          <line>13</line>
+          <line>16</line>
           <properties class="weeks.week7.Week7" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

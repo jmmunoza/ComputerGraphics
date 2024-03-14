@@ -8,7 +8,7 @@ import java.awt.*;
 public class CartesianPlane3D extends ShapeComposite {
 
     public CartesianPlane3D() {
-        double LINES_LENGTH = 400;
+        double LINES_LENGTH = 1000;
 
         Line3D xLine = new Line3D();
         xLine.setColor(Color.RED);

@@ -51,6 +51,8 @@ public class ShapeComposite extends BaseShape {
         for (Shape child : children) {
             child.transform(t);
         }
+
+        onMovement();
     }
 
     @Override
@@ -203,4 +205,6 @@ public class ShapeComposite extends BaseShape {
             child.setCamera(camera);
         }
     }
+
+
 }

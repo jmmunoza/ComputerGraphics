@@ -71,6 +71,8 @@ public class Line3D extends Line {
         x2 = t2.x;
         y2 = t2.y;
         z2 = t2.z;
+
+        onMovement();
     }
 
     @Override
@@ -85,10 +87,14 @@ public class Line3D extends Line {
 
     public void setZ2(double z2) {
         this.z2 = z2;
+
+        onMovement();
     }
 
     public void setZ1(double z1) {
         this.z1 = z1;
+
+        onMovement();
     }
 
     @Override

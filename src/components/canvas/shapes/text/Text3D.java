@@ -58,5 +58,7 @@ public class Text3D extends BaseShape {
     @Override
     public void setZ(double z) {
         this.z = z;
+
+        onMovement();
     }
 }

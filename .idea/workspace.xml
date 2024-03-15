@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="3D CAMERAS!!!!!!">
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/cameras/FollowingCamera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/coordstext/FollowingCoordsText3D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/listeners/ShapePositionListener.java" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Following camera">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/cartesianplane/CartesianPlane3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/cartesianplane/CartesianPlane3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/components/neighborhood/Neighborhood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/neighborhood/Neighborhood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/BaseShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/BaseShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/ShapeComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/ShapeComposite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/circle/Circle3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/line/Line3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/rectangle/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/shapes/text/Text3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weeks/week7/Week7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/week7/Week7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +84,7 @@
       <recent name="weeks.week5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Week7">
+  <component name="RunManager" selected="Application.Week8">
     <configuration name="Week1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="weeks.week1.Week1" />
       <module name="ComputerGraphics" />
@@ -124,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Week4LineSegment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weeks.week4.Week4LineSegment" />
+    <configuration name="Week6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weeks.week6.Week6" />
       <module name="ComputerGraphics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weeks.week4.*" />
+          <option name="PATTERN" value="weeks.week6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Week7" />
         <item itemvalue="Application.Week8" />
+        <item itemvalue="Application.Week7" />
+        <item itemvalue="Application.Week6" />
         <item itemvalue="Application.Week2" />
         <item itemvalue="Application.Week1" />
-        <item itemvalue="Application.Week4LineSegment" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +209,7 @@
       <workItem from="1710269707309" duration="10891000" />
       <workItem from="1710359001396" duration="12658000" />
       <workItem from="1710446634204" duration="11215000" />
-      <workItem from="1710458309669" duration="2025000" />
+      <workItem from="1710458309669" duration="2744000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -352,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710458346586</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Following camera">
+      <option name="closed" value="true" />
+      <created>1710460413697</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710460413697</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +368,8 @@
     <MESSAGE value="Weeks number fixed" />
     <MESSAGE value="Challenges fixed" />
     <MESSAGE value="3D CAMERAS!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="3D CAMERAS!!!!!!" />
+    <MESSAGE value="Following camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Following camera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

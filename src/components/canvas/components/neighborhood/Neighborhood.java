@@ -9,10 +9,10 @@ import java.io.FileNotFoundException;
 public class Neighborhood extends ShapeComposite {
     private final String housePath;
 
-    public Neighborhood(String housePath, int nHouses) throws FileNotFoundException {
+    public Neighborhood(String housePath, int nRowHouses) throws FileNotFoundException {
         this.housePath = housePath;
 
-        add(generateNeighborhood(nHouses));
+        add(generateNeighborhood(nRowHouses));
     }
 
     public ShapeComposite generateNeighborhood(int n) throws FileNotFoundException {

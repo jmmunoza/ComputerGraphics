@@ -1,61 +1,32 @@
 package components.canvas.components.beziersurface;
 
-import components.canvas.components.coordsdrawer.CoordsDrawer;
-import components.canvas.listeners.CanvasKeyListener;
-import components.canvas.observers.CanvasKeyObserver;
 import components.canvas.shapes.ShapeComposite;
-import components.canvas.transformations.rotation.RotationAnticlockwise;
-import components.canvas.transformations.rotation.RotationClockwise;
-import components.canvas.transformations.translation.Translation;
-import math.util.DegreesCalculator;
+import math.bezier.ParametricBezierSurfaces;
+import math.point.Point3D;
+import weeks.finalexam.BezierDTO;
+import weeks.finalexam.BezierFileReader;
 
-import java.awt.event.KeyEvent;
+import java.awt.*;
 import java.io.FileNotFoundException;
 
-public class BezierSurface extends ShapeComposite implements CanvasKeyListener {
-    private static final double ROTATION_DEGREES = 20;
-    private static final double TRANSLATION_FACTOR = 50;
-    private double angle = 0;
+public class BezierSurface extends ShapeComposite {
+    public BezierSurface(String surfacePath) throws FileNotFoundException {
 
-    public BezierSurface(String carPath) throws FileNotFoundException {
-        add(new CoordsDrawer(carPath));
+        BezierDTO data = BezierFileReader.readObject(surfacePath);
 
-        CanvasKeyObserver.attachListener(this);
-    }
-
-    @Override
-    public void onKeyPressed(int code) {
-        switch (code) {
-            case KeyEvent.VK_A -> rotateLeft();
-            case KeyEvent.VK_W -> moveForward();
-            case KeyEvent.VK_S -> moveBack();
-            case KeyEvent.VK_D -> rotateRight();
+        for (int i = 0; i < data.points.length-1 ; i++) {
+            for (int j = 0; j < data.points[i].length-1; j++) {
+                add(new BezierSegment(data.points[i][j], data.points[i + 1][j], data.points[i][j + 1], data.points[i + 1][j + 1]));
+            }
         }
-    }
+        setColor(Color.WHITE);
+        Point3D[][] surface = new ParametricBezierSurfaces(2,2,data.points, data.u, data.v).Surface();
 
-    private void moveForward() {
-        double x = TRANSLATION_FACTOR * Math.sin(Math.toRadians(angle));
-        double y = TRANSLATION_FACTOR * Math.cos(Math.toRadians(angle));
-
-        transform(new Translation(x, y));
-    }
-
-    private void moveBack() {
-        double x = -TRANSLATION_FACTOR * Math.sin(Math.toRadians(angle));
-        double y = -TRANSLATION_FACTOR * Math.cos(Math.toRadians(angle));
-
-        transform(new Translation(x, y));
-    }
-
-    private void rotateRight() {
-        transform(new RotationClockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
-
-        angle = DegreesCalculator.changeAngle(angle, ROTATION_DEGREES);
-    }
-
-    private void rotateLeft() {
-        transform(new RotationAnticlockwise(getXCenter(), getYCenter(), ROTATION_DEGREES));
-
-        angle = DegreesCalculator.changeAngle(angle, -ROTATION_DEGREES);
+        for (int i = 0; i < surface.length-1 ; i++) {
+            for (int j = 0; j < surface[i].length-1; j++) {
+                add(new BezierSegment(surface[i][j], surface[i + 1][j], surface[i][j + 1], surface[i + 1][j + 1]));
+            }
+        }
+        setColor(Color.DARK_GRAY);
     }
 }

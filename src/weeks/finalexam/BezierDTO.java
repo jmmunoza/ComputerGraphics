@@ -3,13 +3,13 @@ package weeks.finalexam;
 import math.point.Point3D;
 
 public class BezierDTO {
-    Point3D[][] points;
+    public Point3D[][] points;
 
-    int u;
-    int v;
+    public int u;
+    public int v;
 
-    Point3D center;
-    
+    public Point3D center;
+
     public BezierDTO(Point3D[][] points, int u, int v, Point3D center) {
         this.points = points;
         this.u = u;
@@ -19,13 +19,13 @@ public class BezierDTO {
 
     @Override
     public String toString() {
-        String pointsString = "";
+        StringBuilder pointsString = new StringBuilder();
 
         for (Point3D[] point3DS : points) {
             for (Point3D point3D : point3DS) {
-                pointsString += point3D + " ";
+                pointsString.append(point3D).append(" ");
             }
-            pointsString += "\n";
+            pointsString.append("\n");
         }
 
         return "BezierDTO{" +

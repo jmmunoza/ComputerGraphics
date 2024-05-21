@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Following camera">
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSurface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/finalexam/FinalExam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/weeks/finalexam/files/surface.txt" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Bezier surface">
+      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSegment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSurface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSurface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/bezier/BinomialCoefficients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/bezier/BinomialCoefficients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/bezier/ParametricBezierSurfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/bezier/ParametricBezierSurfaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weeks/finalexam/BezierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/finalexam/BezierDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jmmunoza"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmmunoza&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jmmunoza/ComputerGraphics.git",
-    "accountId": "370fc69c-c711-4a9e-9e4a-635d8692237c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jmmunoza/ComputerGraphics.git&quot;,
+    &quot;accountId&quot;: &quot;370fc69c-c711-4a9e-9e4a-635d8692237c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -47,41 +50,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FinalExam.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Week1.executor": "Run",
-    "Application.Week2.executor": "Run",
-    "Application.Week3.executor": "Run",
-    "Application.Week3DrawHouse.executor": "Run",
-    "Application.Week3LineSegment.executor": "Run",
-    "Application.Week4.executor": "Run",
-    "Application.Week4DrawHouse.executor": "Run",
-    "Application.Week4LineSegment.executor": "Run",
-    "Application.Week5.executor": "Run",
-    "Application.Week6.executor": "Run",
-    "Application.Week7.executor": "Run",
-    "Application.Week8.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Downloads/EjemploTransformaciones3D",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FinalExam.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3DrawHouse.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week3LineSegment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week4DrawHouse.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week4LineSegment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Week8.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Downloads/EjemploTransformaciones3D&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\ComputerGraphics\src\weeks\week8" />
@@ -225,7 +228,7 @@
       <workItem from="1710359001396" duration="12658000" />
       <workItem from="1710446634204" duration="11215000" />
       <workItem from="1710458309669" duration="2744000" />
-      <workItem from="1716320345617" duration="617000" />
+      <workItem from="1716320345617" duration="5373000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -363,11 +366,30 @@
       <option name="project" value="LOCAL" />
       <updated>1710460413697</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Bezier surface">
+      <option name="closed" value="true" />
+      <created>1716321012340</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716321012340</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week 1 almost complemete" />
@@ -385,7 +407,8 @@
     <MESSAGE value="Challenges fixed" />
     <MESSAGE value="3D CAMERAS!!!!!!" />
     <MESSAGE value="Following camera" />
-    <option name="LAST_COMMIT_MESSAGE" value="Following camera" />
+    <MESSAGE value="Bezier surface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bezier surface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

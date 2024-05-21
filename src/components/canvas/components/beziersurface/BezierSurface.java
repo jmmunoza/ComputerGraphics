@@ -9,8 +9,7 @@ import java.awt.*;
 import java.io.FileNotFoundException;
 
 public class BezierSurface extends ShapeComposite {
-    public BezierSurface(String surfacePath) throws FileNotFoundException {
-        BlendingFunctions.BezierDTO data = BlendingFunctions.BezierFileReader.readObject(surfacePath);
+    public BezierSurface(BlendingFunctions.BezierDTO data) throws FileNotFoundException {
         generateSurface(data.points, Color.WHITE);
 
         Point3D[][] surface = new ParametricBezierSurfaces(data.points, data.u, data.v).find();

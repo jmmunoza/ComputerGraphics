@@ -27,9 +27,9 @@ public class CircularCamera extends Camera {
         double latRadians = Math.toRadians(latitude);
         double lonRadians = Math.toRadians(longitude);
 
-        double x = radius * Math.sin(latRadians) * Math.cos(lonRadians);
-        double y = radius * Math.cos(latRadians);
-        double z = radius * Math.sin(latRadians) * Math.sin(lonRadians);
+        double x = radius * Math.sin(latRadians) * Math.cos(lonRadians) + lookAt.getX();
+        double y = radius * Math.cos(latRadians) + lookAt.getY();
+        double z = radius * Math.sin(latRadians) * Math.sin(lonRadians) + lookAt.getZ();
 
         setPosition(x, y, z);
     }

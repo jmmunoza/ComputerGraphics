@@ -24,7 +24,7 @@ public class FinalExam {
 
         composite.add(
                 new CartesianPlane3D(),
-                new BezierSurface(getSurfacePath()),
+                new BezierSurface(data),
                 new PositionText(),
                 new DimensionText());
 

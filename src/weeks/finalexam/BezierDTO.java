@@ -16,4 +16,22 @@ public class BezierDTO {
         this.v = v;
         this.center = center;
     }
+
+    @Override
+    public String toString() {
+        String pointsString = "";
+
+        for (Point3D[] point3DS : points) {
+            for (Point3D point3D : point3DS) {
+                pointsString += point3D + " ";
+            }
+            pointsString += "\n";
+        }
+
+        return "BezierDTO{" +
+                "u=" + u +
+                ", v=" + v +
+                ", center=" + center +
+                '}' + "\n" + pointsString;
+    }
 }

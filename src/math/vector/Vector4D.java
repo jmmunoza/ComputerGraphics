@@ -26,6 +26,12 @@ public class Vector4D extends Vector {
         return new Vector4D(vector.components);
     }
 
+    public static Vector4D multiply(Vector4D v, double scalar) {
+        Vector vector = Vector.multiply(v, scalar);
+
+        return new Vector4D(vector.components);
+    }
+
     public static Vector4D normalize(Vector4D v) {
         Vector vector = Vector.normalize(v);
 

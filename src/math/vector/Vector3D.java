@@ -34,6 +34,12 @@ public class Vector3D extends Vector {
         return new Vector3D(vector.components);
     }
 
+    public static Vector3D multiply(Vector3D v, double scalar) {
+        Vector vector = Vector.multiply(v, scalar);
+
+        return new Vector3D(vector.components);
+    }
+
     public static Vector3D normalize(Vector3D v) {
         Vector vector = Vector.normalize(v);
 

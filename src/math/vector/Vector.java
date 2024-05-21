@@ -9,6 +9,14 @@ public class Vector {
         this.components = components;
     }
 
+    public static Vector multiply(Vector v, double scalar) {
+        for (int i = 0; i < v.dimension; i++) {
+            v.components[i] *= scalar;
+        }
+
+        return v;
+    }
+
     public static double dotProduct(Vector v1, Vector v2) {
         double product = 0;
 

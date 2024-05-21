@@ -17,7 +17,7 @@ This project demonstrates how to render curves in 3D by calculating a surface us
 
 - `./src/math/bezier/BinomialCoefficients.java`
   - Computes the binomial coefficient.
-    ![Equation](https://latex.codecogs.com/png.latex?\frac{a}{b})
+    https://latex.codecogs.com/svg.image?&space;C(n,k)=frac{n!}{k!(n-k)!}
 
 - `./src/math/bezier/BlendingFunctions.java`
   - Main class for the Bernstein polynomials.

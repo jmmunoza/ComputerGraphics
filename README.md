@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates how to render curves in 3D by calculating a surface using Bezier curves.
+This project demonstrates how to render and calculate a surface using Bezier curves.
 
 ## Important Files
 

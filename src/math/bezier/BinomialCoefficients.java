@@ -1,21 +1,9 @@
 package math.bezier;
 
-public class BinomialCoefficients {
-    public int n;
-    public int k;
+import math.factorial.Factorial;
 
-    public BinomialCoefficients(int n, int k){
-        this.n = n;
-        this.k = k;
-    }
-    public int Factorial(int a){
-        int factorial = 1;
-        for (int i = 1; i <= a; i++) {
-            factorial = factorial * i;
-        }
-        return factorial;
-    }
-    public double Coefficient(){
-        return Factorial(n)/(Factorial(k)*Factorial(n-k));
+public class BinomialCoefficients {
+    public static double find(int n, int k) {
+        return (double) Factorial.find(n) / (Factorial.find(k) * Factorial.find(n - k));
     }
 }

@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Bezier surface">
-      <change afterPath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSegment.java" afterDir="false" />
+    <list default="true" id="74a96c38-ba63-4a8d-b789-c96d1a2a3799" name="Changes" comment="Bezier surface WORKINGGGGGGGGGGG">
+      <change afterPath="$PROJECT_DIR$/src/math/factorial/Factorial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSegment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSegment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSurface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/components/beziersurface/BezierSurface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/bezier/BinomialCoefficients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/bezier/BinomialCoefficients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/bezier/BlendingFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/bezier/BlendingFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/bezier/ParametricBezierSurfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/bezier/ParametricBezierSurfaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weeks/finalexam/BezierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weeks/finalexam/BezierDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +229,7 @@
       <workItem from="1710359001396" duration="12658000" />
       <workItem from="1710446634204" duration="11215000" />
       <workItem from="1710458309669" duration="2744000" />
-      <workItem from="1716320345617" duration="5373000" />
+      <workItem from="1716320345617" duration="7359000" />
     </task>
     <task id="LOCAL-00001" summary="Week 1 almost complemete">
       <option name="closed" value="true" />
@@ -374,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716321012340</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Bezier surface WORKINGGGGGGGGGGG">
+      <option name="closed" value="true" />
+      <created>1716326045537</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716326045537</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +417,8 @@
     <MESSAGE value="3D CAMERAS!!!!!!" />
     <MESSAGE value="Following camera" />
     <MESSAGE value="Bezier surface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bezier surface" />
+    <MESSAGE value="Bezier surface WORKINGGGGGGGGGGG" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bezier surface WORKINGGGGGGGGGGG" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

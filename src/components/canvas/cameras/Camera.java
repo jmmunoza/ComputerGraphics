@@ -38,7 +38,6 @@ public abstract class Camera implements CanvasKeyArrowListener, CanvasKeyListene
         Vector4D MPv = Matrix4x4.times(P, viewCoords);
         Vector4D result = normalizeW(MPv);
 
-
         return new Vector3D(result.x, result.y, result.z);
     }
 
@@ -103,7 +102,17 @@ public abstract class Camera implements CanvasKeyArrowListener, CanvasKeyListene
         lookAt = new Point3D(x, y, z);
     }
 
+    public void lookAt(Point3D position) {
+        this.lookAt = position;
+    }
+
     public void setPosition(double x, double y, double z) {
         position = new Point3D(x, y, z);
+
+        calculateM();
+    }
+
+    public void setPosition(Point3D position) {
+        this.position = position;
     }
 }
